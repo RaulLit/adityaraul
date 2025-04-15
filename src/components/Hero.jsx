@@ -46,13 +46,13 @@ const Hero = () => {
             <div className="flex space-x-4 pt-4">
               <a
                 href="#projects"
-                className="px-6 py-3 bg-transparent border-2 border-[#64FFDA] text-[#64FFDA] hover:bg-[#64FFDA] hover:bg-opacity-10 rounded-button whitespace-nowrap"
+                className="px-6 py-3 bg-transparent border-2 border-[#64FFDA] text-[#64FFDA] hover:bg-[#64FFDA] hover:bg-opacity-10 rounded-lg whitespace-nowrap"
               >
                 View My Work
               </a>
               <a
                 href="#contact"
-                className="px-6 py-3 bg-[#64FFDA] text-primary hover:bg-opacity-90 rounded-button whitespace-nowrap"
+                className="px-6 py-3 bg-[#64FFDA] text-primary hover:bg-opacity-90 rounded-lg whitespace-nowrap"
               >
                 Contact Me
               </a>
@@ -63,9 +63,9 @@ const Hero = () => {
           <div className="md:w-1/2 glass-card p-8 rounded-lg">
             <div
               style={{
-                backgroundImage: `url('https://readdy.ai/api/search-image?query=professional%20portrait%20of%20a%20young%20Indian%20male%20developer%20with%20a%20modern%2C%20minimalist%20aesthetic%2C%20navy%20blue%20background%2C%20high%20quality%20studio%20lighting%2C%20professional%20attire%2C%20friendly%20expression%2C%20looking%20confident&width=500&height=600&seq=1&orientation=portrait')`
+                backgroundImage: `url('/profile_photo_blue-bg.png')`
               }}
-              className="w-full h-[400px] bg-cover bg-center rounded object-top"
+              className="w-full h-[400px] bg-cover bg-center rounded-lg object-top"
             ></div>
           </div>
         </div>

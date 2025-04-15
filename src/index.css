@@ -1,8 +1,12 @@
-@tailwind utilities;
 @import "tailwindcss";
 
 .glassmorphism {
   @apply bg-white/10 backdrop-blur-lg rounded-xl shadow-lg;
+}
+
+.text-primary {
+  --tw-text-opacity: 1;
+  color: rgb(10 25 47 / var(--tw-text-opacity, 1));
 }
 
 :where([class^="ri-"])::before { content: "\f3c2"; }
@@ -45,7 +49,6 @@ body {
 }
 input, textarea {
   background: rgba(230, 241, 255, 0.05);
-  border: 1px solid rgba(230, 241, 255, 0.1);
   color: #E6F1FF;
   outline: none;
 }
@@ -86,9 +89,11 @@ button {
   column-count: 3;
   column-gap: 20px;
 }
+.masonry-grid div {
+  margin-bottom: 20px;
+}
 .masonry-grid img {
   width: 100%;
-  margin-bottom: 20px;
   break-inside: avoid;
   border-radius: 8px;
   transition: all 0.3s ease;

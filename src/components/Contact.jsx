@@ -21,7 +21,7 @@ const Contact = () => {
               <a
                 href="#"
                 download
-                className="px-6 py-3 bg-[#64FFDA] text-primary hover:bg-opacity-90 rounded-button whitespace-nowrap flex items-center"
+                className="px-6 py-3 bg-[#64FFDA] text-primary hover:bg-opacity-90 rounded-lg whitespace-nowrap flex items-center"
               >
                 <i className="ri-download-line ri-lg mr-2"></i>
                 Download Resume
@@ -76,7 +76,7 @@ const Contact = () => {
 
           {/* Right contact form */}
           <div className="md:w-1/2">
-            <form className="glass-card p-8 rounded-lg space-y-6">
+            <form className="glass-card p-8 rounded-2xl space-y-6">
               <div>
                 <label htmlFor="name" className="block text-secondary mb-2">
                   Name
@@ -84,7 +84,7 @@ const Contact = () => {
                 <input
                   type="text"
                   id="name"
-                  className="w-full px-4 py-3 rounded border-none focus:ring-2 focus:ring-[#64FFDA] text-sm"
+                  className="w-full px-4 py-3 rounded-lg border-none focus:ring-2 focus:ring-[#64FFDA] text-sm"
                   placeholder="Your Name"
                 />
               </div>
@@ -95,7 +95,7 @@ const Contact = () => {
                 <input
                   type="email"
                   id="email"
-                  className="w-full px-4 py-3 rounded border-none focus:ring-2 focus:ring-[#64FFDA] text-sm"
+                  className="w-full px-4 py-3 rounded-lg border-none focus:ring-2 focus:ring-[#64FFDA] text-sm"
                   placeholder="your.email@example.com"
                 />
               </div>
@@ -106,7 +106,7 @@ const Contact = () => {
                 <input
                   type="text"
                   id="subject"
-                  className="w-full px-4 py-3 rounded border-none focus:ring-2 focus:ring-[#64FFDA] text-sm"
+                  className="w-full px-4 py-3 rounded-lg border-none focus:ring-2 focus:ring-[#64FFDA] text-sm"
                   placeholder="What is this regarding?"
                 />
               </div>
@@ -117,7 +117,7 @@ const Contact = () => {
                 <textarea
                   id="message"
                   rows="5"
-                  className="w-full px-4 py-3 rounded border-none focus:ring-2 focus:ring-[#64FFDA] text-sm"
+                  className="w-full px-4 py-3 rounded-lg border-none focus:ring-2 focus:ring-[#64FFDA] text-sm"
                   placeholder="Your message here..."
                 ></textarea>
               </div>
@@ -129,7 +129,7 @@ const Contact = () => {
               </div>
               <button
                 type="submit"
-                className="w-full px-6 py-3 bg-[#64FFDA] text-primary hover:bg-opacity-90 rounded-button whitespace-nowrap"
+                className="w-full px-6 py-3 bg-[#64FFDA] text-primary hover:bg-opacity-90 rounded-lg whitespace-nowrap"
               >
                 Send Message
               </button>

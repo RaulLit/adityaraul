@@ -68,7 +68,7 @@ const Projects = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, idx) => (
-            <div key={idx} className="glass-card rounded-lg overflow-hidden">
+            <div key={idx} className="glass-card rounded-2xl overflow-hidden">
               <div
                 style={{
                   backgroundImage: `url('${project.image}')`,
@@ -110,7 +110,7 @@ const Projects = () => {
         <div className="text-center mt-12">
           <a
             href="#"
-            className="px-6 py-3 bg-transparent border-2 border-[#64FFDA] text-[#64FFDA] hover:bg-[#64FFDA] hover:bg-opacity-10 rounded-button whitespace-nowrap"
+            className="px-6 py-3 bg-transparent border-2 border-[#64FFDA] text-[#64FFDA] hover:bg-[#64FFDA] hover:bg-opacity-10 rounded-lg whitespace-nowrap"
           >
             View All Projects
           </a>

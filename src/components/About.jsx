@@ -18,7 +18,7 @@ const About = () => {
                   backgroundImage:
                     "url('https://readdy.ai/api/search-image?query=professional%20portrait%20of%20a%20young%20Indian%20male%20developer%20in%20casual%20professional%20attire%2C%20sitting%20at%20a%20modern%20workspace%20with%20multiple%20monitors%2C%20navy%20blue%20ambient%20lighting%2C%20focused%20on%20coding%2C%20side%20profile%2C%20high%20quality%20professional%20photography&width=500&height=600&seq=2&orientation=portrait')",
                 }}
-                className="w-full h-[500px] bg-cover bg-center rounded object-top"
+                className="w-full h-[500px] bg-cover bg-center rounded-lg object-top"
               ></div>
             </div>
           </div>

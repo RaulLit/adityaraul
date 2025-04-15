@@ -70,7 +70,7 @@ const Skills = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {skills.map((section, idx) => (
-            <div className="glass-card p-6 rounded-lg" key={idx}>
+            <div className="glass-card p-6 rounded-2xl" key={idx}>
               <div className="w-12 h-12 flex items-center justify-center mb-4 text-[#64FFDA]">
                 <i className={`${section.icon} ri-2x`}></i>
               </div>
