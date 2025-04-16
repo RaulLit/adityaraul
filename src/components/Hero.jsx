@@ -40,7 +40,7 @@ const Hero = () => {
               </div>
             </div>
             <p className="text-lg text-secondary max-w-xl">
-              I build exceptional digital experiences with a focus on performance and user experience.
+              I build exceptional digital platforms with a focus on performance and user experience.
               Specializing in modern web technologies and creative problem solving.
             </p>
             <div className="flex space-x-4 pt-4">

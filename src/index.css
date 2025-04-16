@@ -1,5 +1,11 @@
 @import "tailwindcss";
 
+@layer utilities {
+  .text-highlight {
+    color: #64FFDA;
+  }
+}
+
 .glassmorphism {
   @apply bg-white/10 backdrop-blur-lg rounded-xl shadow-lg;
 }

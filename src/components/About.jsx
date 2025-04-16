@@ -16,7 +16,7 @@ const About = () => {
               <div
                 style={{
                   backgroundImage:
-                    "url('https://readdy.ai/api/search-image?query=professional%20portrait%20of%20a%20young%20Indian%20male%20developer%20in%20casual%20professional%20attire%2C%20sitting%20at%20a%20modern%20workspace%20with%20multiple%20monitors%2C%20navy%20blue%20ambient%20lighting%2C%20focused%20on%20coding%2C%20side%20profile%2C%20high%20quality%20professional%20photography&width=500&height=600&seq=2&orientation=portrait')",
+                    "url('/about_img.jpeg')",
                 }}
                 className="w-full h-[500px] bg-cover bg-center rounded-lg object-top"
               ></div>
@@ -26,23 +26,24 @@ const About = () => {
           {/* Text content */}
           <div className="md:w-3/5 space-y-6">
             <p className="text-lg text-secondary">
-              Hello! I'm Aditya, a passionate developer based in Mumbai, India with over 5 years of
-              experience in building digital products and experiences.
+              Hello! <span className="text-highlight">I'm Aditya</span>, a passionate developer based in Navi Mumbai, India with
+              experience in building mobile applications, websites and other digital products.
             </p>
             <p className="text-lg text-secondary">
-              My journey in tech began during my undergraduate studies at the Indian Institute of
-              Technology, where I discovered my passion for creating elegant solutions to complex
-              problems. Since then, I've worked with various technologies and frameworks to deliver
+              My journey in tech began after 12th boards during Covid-19 pandemic, I started with 
+              Java as my first coding language. Later on, I started exploring the field of development,
+              where I found my passion for creating elegant solutions to day to day problems. 
+              Since then, I've worked with various technologies and frameworks to deliver
               high-quality applications.
             </p>
             <p className="text-lg text-secondary">
               When I'm not coding, you'll find me exploring the world through my camera lens,
-              hiking in nature, or experimenting with new cooking recipes. I believe that diverse
-              experiences fuel creativity in problem-solving.
+              hiking in nature, playing basketball or playing guitar & trying to sing. I believe that learning 
+              diverse skills in tech & non-tech keeps fueling the excitement in me.
             </p>
             <p className="text-lg text-secondary">
-              Currently, I'm focused on building accessible, human-centered products at Innovate
-              Technologies, where I lead the frontend development team.
+              Currently, I'm focused on building my own brand <a className="text-highlight" href="https://lastbenchscholar.com" target="_blank">LastBenchScholar</a>,
+              a student centric ecosystem for growth and collaboration.
             </p>
 
             {/* Quick Facts */}
@@ -52,15 +53,15 @@ const About = () => {
                 {[
                   {
                     icon: "ri-graduation-cap-line",
-                    text: "B.Tech in Computer Science",
+                    text: "B.E in Electronics & Telecommunication",
                   },
                   {
                     icon: "ri-map-pin-line",
-                    text: "Mumbai, India",
+                    text: "Navi Mumbai, Maharashtra, India",
                   },
                   {
                     icon: "ri-briefcase-line",
-                    text: "5+ Years Experience",
+                    text: "Web & App developer",
                   },
                   {
                     icon: "ri-translate-2",
