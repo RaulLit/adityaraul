@@ -5,12 +5,54 @@ const Hero = () => {
     <section id="home" className="min-h-screen flex items-center justify-center relative pt-20">
       <div className="animated-bg">
         {[
-          { w: 80, h: 80, left: "10%", top: "10%", delay: "0s", duration: "25s" },
-          { w: 120, h: 120, left: "20%", top: "60%", delay: "2s", duration: "30s" },
-          { w: 50, h: 50, left: "70%", top: "30%", delay: "4s", duration: "18s" },
-          { w: 150, h: 150, left: "80%", top: "70%", delay: "6s", duration: "35s" },
-          { w: 60, h: 60, left: "50%", top: "50%", delay: "8s", duration: "22s" },
-          { w: 100, h: 100, left: "30%", top: "80%", delay: "10s", duration: "28s" },
+          {
+            w: 80,
+            h: 80,
+            left: `${Math.floor(Math.random() * 100)}%`,
+            top: `${Math.floor(Math.random() * 80) + 30}%`,
+            delay: "0s",
+            duration: "20s",
+          },
+          {
+            w: 120,
+            h: 120,
+            left: `${Math.floor(Math.random() * 100)}%`,
+            top: `${Math.floor(Math.random() * 80) + 30}%`,
+            delay: "0s",
+            duration: "25s",
+          },
+          {
+            w: 50,
+            h: 50,
+            left: `${Math.floor(Math.random() * 100)}%`,
+            top: `${Math.floor(Math.random() * 80) + 30}%`,
+            delay: "0s",
+            duration: "13s",
+          },
+          {
+            w: 150,
+            h: 150,
+            left: `${Math.floor(Math.random() * 100)}%`,
+            top: `${Math.floor(Math.random() * 80) + 30}%`,
+            delay: "0s",
+            duration: "30s",
+          },
+          {
+            w: 60,
+            h: 60,
+            left: `${Math.floor(Math.random() * 100)}%`,
+            top: `${Math.floor(Math.random() * 80) + 30}%`,
+            delay: "0s",
+            duration: "17s",
+          },
+          {
+            w: 100,
+            h: 100,
+            left: `${Math.floor(Math.random() * 100)}%`,
+            top: `${Math.floor(Math.random() * 80) + 30}%`,
+            delay: "0s",
+            duration: "23s",
+          },
         ].map((bg, index) => (
           <span
             key={index}
