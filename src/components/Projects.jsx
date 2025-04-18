@@ -2,58 +2,39 @@ import React from "react";
 
 const projects = [
   {
-    title: "E-Commerce Platform",
+    title: "Hubbie Chat",
     description:
-      "A full-stack e-commerce solution with real-time inventory management, payment processing, and analytics dashboard.",
-    tech: ["React", "Node.js", "MongoDB", "Stripe"],
-    image:
-      "https://readdy.ai/api/search-image?query=modern%20e-commerce%20website%20interface%20with%20dark%20theme&width=400&height=250&seq=3&orientation=landscape",
-    links: { live: "#", code: "#" },
+      "Just another chatting application which has active feature additions from student's feedbacks.",
+    tech: ["React", "Node.js", "MongoDB", "Material-UI", "Firebase", "Socket.io"],
+    image: "/projects/hubbie_chat.png",
+    links: { live: "https://chat.lastbenchscholar.com/" },
   },
   {
-    title: "Fitness Tracker App",
+    title: "Blogging Platform",
     description:
-      "A mobile application for tracking workouts, nutrition, and progress with personalized recommendations and social features.",
-    tech: ["React Native", "Firebase", "TensorFlow"],
-    image:
-      "https://readdy.ai/api/search-image?query=mobile%20app%20interface%20for%20fitness%20tracking&width=400&height=250&seq=4&orientation=landscape",
-    links: { live: "#", code: "#" },
+      "It has a minimalistic design and promotes upskilling specifically for student's lifestyle through blogs.",
+    tech: ["React", "Node.js", "MongoDB", "Material-UI"],
+    image: "/projects/blogging.png",
+    links: { live: "https://blog.lastbenchscholar.com/" },
   },
   {
-    title: "AI Assistant Platform",
-    description:
-      "An intelligent virtual assistant platform with natural language processing capabilities for customer support and task automation.",
-    tech: ["Python", "TensorFlow", "Vue.js", "FastAPI"],
-    image:
-      "https://readdy.ai/api/search-image?query=AI-powered%20chatbot%20interface&width=400&height=250&seq=5&orientation=landscape",
-    links: { live: "#", code: "#" },
-  },
-  {
-    title: "Analytics Dashboard",
+    title: "Meteor Strike",
     description:
       "A comprehensive data visualization platform for business intelligence with real-time monitoring and customizable reports.",
-    tech: ["D3.js", "Angular", "Express", "PostgreSQL"],
-    image:
-      "https://readdy.ai/api/search-image?query=data%20visualization%20dashboard&width=400&height=250&seq=6&orientation=landscape",
-    links: { live: "#", code: "#" },
+    tech: ["HTML", "CSS", "JavaScript", "Canvas API"],
+    image: "/projects/meteor_strike.png",
+    links: {
+      live: "https://raullit.github.io/Games/Game%201/index.html",
+      code: "https://github.com/RaulLit/RaulLit.github.io/tree/main/Games/Game%201",
+    },
   },
   {
-    title: "Blockchain Wallet",
+    title: "Mi Notez",
     description:
-      "A secure cryptocurrency wallet with multi-chain support, transaction history, and advanced security features.",
-    tech: ["Solidity", "Web3.js", "React", "Ethers.js"],
-    image:
-      "https://readdy.ai/api/search-image?query=blockchain%20application%20interface&width=400&height=250&seq=7&orientation=landscape",
-    links: { live: "#", code: "#" },
-  },
-  {
-    title: "Smart Home System",
-    description:
-      "An IoT platform for smart home automation with device management, scene creation, and voice control integration.",
-    tech: ["IoT", "MQTT", "React", "Node.js"],
-    image:
-      "https://readdy.ai/api/search-image?query=smart%20home%20control%20application&width=400&height=250&seq=8&orientation=landscape",
-    links: { live: "#", code: "#" },
+      "Mi Notez is a notes-keeping web app that uses the Material-UI styling library which implements Google's design style",
+    tech: ["React", "Material-UI", "Firebase"],
+    image: "/projects/mi_notez.png",
+    links: { live: "https://mi-notez.web.app/", code: "https://github.com/RaulLit/mi-notez" },
   },
 ];
 
@@ -92,29 +73,33 @@ const Projects = () => {
                   <a
                     href={project.links.live}
                     className="flex items-center text-[#64FFDA] hover:underline"
+                    target="_blank"
                   >
                     <i className="ri-external-link-line mr-1"></i>Live Demo
                   </a>
-                  <a
-                    href={project.links.code}
-                    className="flex items-center text-[#64FFDA] hover:underline"
-                  >
-                    <i className="ri-github-line mr-1"></i>Code
-                  </a>
+                  {project.links.code && (
+                    <a
+                      href={project.links.code}
+                      className="flex items-center text-[#64FFDA] hover:underline"
+                      target="_blank"
+                    >
+                      <i className="ri-github-line mr-1"></i>Code
+                    </a>
+                  )}
                 </div>
               </div>
             </div>
           ))}
         </div>
 
-        <div className="text-center mt-12">
+        {/* <div className="text-center mt-12">
           <a
             href="#"
             className="px-6 py-3 bg-transparent border-2 border-[#64FFDA] text-[#64FFDA] hover:bg-[#64FFDA] hover:bg-opacity-10 rounded-lg whitespace-nowrap"
           >
             View All Projects
           </a>
-        </div>
+        </div> */}
       </div>
     </section>
   );
