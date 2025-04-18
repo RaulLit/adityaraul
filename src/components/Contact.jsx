@@ -1,6 +1,81 @@
-import React from "react";
+import React, { useState } from "react";
 
 const Contact = () => {
+  const [success, setSuccess] = useState(false);
+  const [error, setError] = useState(false);
+
+  const showSuccess = () => {
+    setSuccess(true);
+    setTimeout(() => setSuccess(false), 10000);
+  };
+  const showError = () => {
+    setError(true);
+    setTimeout(() => setError(false), 10000);
+  };
+
+  const information = [
+    {
+      icon: "ri-mail-line",
+      label: "Email",
+      value: "adityaraulco@gmail.com",
+    },
+    {
+      icon: "ri-map-pin-line",
+      label: "Location",
+      value: "Navi Mumbai, Maharashtra, India",
+    },
+    {
+      icon: "ri-linkedin-line",
+      label: "LinkedIn",
+      value: "linkedin.com/in/adityaraul",
+    },
+  ];
+
+  const platforms = [
+    { label: "github", href: "https://github.com/RaulLit" },
+    { label: "linkedin", href: "https://www.linkedin.com/in/adityakraul/" },
+    { label: "twitter", href: "https://x.com/adityakraul" },
+    { label: "instagram", href: "https://www.instagram.com/adii.lit/" },
+  ];
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    try {
+      const formData = new FormData(event.target);
+
+      formData.append("access_key", "6de2d503-8aca-4004-b9d2-76e1fe5b0652");
+
+      const object = Object.fromEntries(formData);
+      const json = JSON.stringify(object);
+
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: json,
+      });
+      // Check if the response was successful before parsing JSON
+      if (!response.ok) {
+        throw new Error(`HTTP error! Status: ${response.status}`);
+      }
+
+      const res = await response.json();
+
+      if (res.success) {
+        showSuccess();
+      } else {
+        // Handle case where API returns success: false
+        console.log("API returned unsuccessful response", res);
+        showError();
+      }
+    } catch (err) {
+      console.log("Error in form submission:", err);
+      showError();
+    }
+  };
+
   return (
     <section id="contact" className="py-20 relative">
       <div className="max-w-7xl mx-auto px-6">
@@ -19,7 +94,7 @@ const Contact = () => {
 
             <div className="flex items-center pt-4">
               <a
-                href="#"
+                href="/Resume_13-02-2025.pdf"
                 download
                 className="px-6 py-3 bg-[#64FFDA] text-primary hover:bg-opacity-90 rounded-lg whitespace-nowrap flex items-center"
               >
@@ -29,23 +104,7 @@ const Contact = () => {
             </div>
 
             <div className="space-y-4 pt-4">
-              {[
-                {
-                  icon: "ri-mail-line",
-                  label: "Email",
-                  value: "aditya.raul@example.com",
-                },
-                {
-                  icon: "ri-map-pin-line",
-                  label: "Location",
-                  value: "Mumbai, India",
-                },
-                {
-                  icon: "ri-linkedin-line",
-                  label: "LinkedIn",
-                  value: "linkedin.com/in/adityaraul",
-                },
-              ].map((info, idx) => (
+              {information.map((info, idx) => (
                 <div className="flex items-start" key={idx}>
                   <div className="w-10 h-10 flex items-center justify-center mr-4 text-[#64FFDA]">
                     <i className={`${info.icon} ri-lg`}></i>
@@ -61,13 +120,14 @@ const Contact = () => {
             <div className="pt-6">
               <h3 className="text-xl font-semibold mb-4">Connect With Me</h3>
               <div className="flex space-x-4">
-                {["github", "linkedin", "twitter", "instagram", "dribbble"].map((platform) => (
+                {platforms.map((platform) => (
                   <a
-                    key={platform}
-                    href="#"
+                    key={platform.label}
+                    href={platform.href}
+                    target="_blank"
                     className="w-12 h-12 flex items-center justify-center glass-card rounded-full text-[#64FFDA] hover:text-white transition-colors"
                   >
-                    <i className={`ri-${platform}-fill ri-lg`}></i>
+                    <i className={`ri-${platform.label}-fill ri-lg`}></i>
                   </a>
                 ))}
               </div>
@@ -76,7 +136,7 @@ const Contact = () => {
 
           {/* Right contact form */}
           <div className="md:w-1/2">
-            <form className="glass-card p-8 rounded-2xl space-y-6">
+            <form className="glass-card p-8 rounded-2xl space-y-6" onSubmit={handleSubmit}>
               <div>
                 <label htmlFor="name" className="block text-secondary mb-2">
                   Name
@@ -84,6 +144,7 @@ const Contact = () => {
                 <input
                   type="text"
                   id="name"
+                  name="name"
                   className="w-full px-4 py-3 rounded-lg border-none focus:ring-2 focus:ring-[#64FFDA] text-sm"
                   placeholder="Your Name"
                 />
@@ -95,6 +156,7 @@ const Contact = () => {
                 <input
                   type="email"
                   id="email"
+                  name="email"
                   className="w-full px-4 py-3 rounded-lg border-none focus:ring-2 focus:ring-[#64FFDA] text-sm"
                   placeholder="your.email@example.com"
                 />
@@ -106,6 +168,7 @@ const Contact = () => {
                 <input
                   type="text"
                   id="subject"
+                  name="subject"
                   className="w-full px-4 py-3 rounded-lg border-none focus:ring-2 focus:ring-[#64FFDA] text-sm"
                   placeholder="What is this regarding?"
                 />
@@ -117,23 +180,32 @@ const Contact = () => {
                 <textarea
                   id="message"
                   rows="5"
+                  name="message"
                   className="w-full px-4 py-3 rounded-lg border-none focus:ring-2 focus:ring-[#64FFDA] text-sm"
                   placeholder="Your message here..."
                 ></textarea>
               </div>
-              <div className="flex items-center">
-                <input type="checkbox" id="newsletter" className="custom-checkbox" />
-                <label htmlFor="newsletter" className="ml-2 text-secondary text-sm">
-                  Subscribe to my newsletter
-                </label>
-              </div>
               <button
                 type="submit"
-                className="w-full px-6 py-3 bg-[#64FFDA] text-primary hover:bg-opacity-90 rounded-lg whitespace-nowrap"
+                className="w-full px-6 py-3 bg-[#64FFDA] text-primary hover:bg-opacity-90 rounded-lg whitespace-nowrap cursor-pointer"
               >
                 Send Message
               </button>
             </form>
+            <div
+              className={`p-4 m-1 glass rounded-lg text-green-400 transition-opacity duration-300 ${
+                success ? "opacity-100" : "opacity-0 hidden"
+              }`}
+            >
+              Email sent successfully! Thank you for your time.
+            </div>
+            <div
+              className={`p-4 m-1 glass rounded-lg text-red-400 transition-opacity duration-300 ${
+                error ? "opacity-100" : "opacity-0 hidden"
+              }`}
+            >
+              Error in sending email. Don't send spam emails.
+            </div>
           </div>
         </div>
       </div>
