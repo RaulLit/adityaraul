@@ -11,12 +11,11 @@ const About = () => {
 
         <div className="flex flex-col md:flex-row gap-12 items-center">
           {/* Image */}
-          <div className="md:w-2/5">
-            <div className="glass-card p-4 rounded-lg">
+          <div className="w-full md:w-2/5">
+            <div className="glass-card p-0 sm:p-4 rounded-lg">
               <div
                 style={{
-                  backgroundImage:
-                    "url('/about_img.jpeg')",
+                  backgroundImage: "url('/about_img.jpeg')",
                 }}
                 className="w-full h-[500px] bg-cover bg-center rounded-lg object-top"
               ></div>
@@ -26,30 +25,34 @@ const About = () => {
           {/* Text content */}
           <div className="md:w-3/5 space-y-6">
             <p className="text-lg text-secondary">
-              Hello! <span className="text-highlight">I'm Aditya</span>, a passionate developer based in Navi Mumbai, India with
-              experience in building mobile applications, websites and other digital products.
+              Hello! <span className="text-highlight">I'm Aditya</span>, a passionate developer
+              based in Navi Mumbai, India with experience in building mobile applications, websites
+              and other digital products.
             </p>
             <p className="text-lg text-secondary">
-              My journey in tech began after 12th boards during Covid-19 pandemic, I started with 
-              Java as my first coding language. Later on, I started exploring the field of development,
-              where I found my passion for creating elegant solutions to day to day problems. 
-              Since then, I've worked with various technologies and frameworks to deliver
+              My journey in tech began after 12th boards during Covid-19 pandemic, I started with
+              Java as my first coding language. Later on, I started exploring the field of
+              development, where I found my passion for creating elegant solutions to day to day
+              problems. Since then, I've worked with various technologies and frameworks to deliver
               high-quality applications.
             </p>
             <p className="text-lg text-secondary">
-              When I'm not coding, you'll find me exploring the world through my camera lens,
-              hiking in nature, playing basketball or playing guitar & trying to sing. I believe that learning 
-              diverse skills in tech & non-tech keeps fueling the excitement in me.
+              When I'm not coding, you'll find me exploring the world through my camera lens, hiking
+              in nature, playing basketball or playing guitar & trying to sing. I believe that
+              learning diverse skills in tech & non-tech keeps fueling the excitement in me.
             </p>
             <p className="text-lg text-secondary">
-              Currently, I'm focused on building my own brand <a className="text-highlight" href="https://lastbenchscholar.com" target="_blank">LastBenchScholar</a>,
-              a student centric ecosystem for growth and collaboration.
+              Currently, I'm focused on building my own brand{" "}
+              <a className="text-highlight" href="https://lastbenchscholar.com" target="_blank">
+                LastBenchScholar
+              </a>
+              , a student centric ecosystem for growth and collaboration.
             </p>
 
             {/* Quick Facts */}
             <div className="pt-4">
               <h3 className="text-xl font-semibold mb-4">Quick Facts</h3>
-              <div className="grid grid-cols-2 gap-4">
+              <div className="grid sm:grid-cols-2 gap-4">
                 {[
                   {
                     icon: "ri-graduation-cap-line",

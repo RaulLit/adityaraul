@@ -10,7 +10,7 @@ const Hero = () => {
           { w: 50, h: 50, left: "70%", top: "30%", delay: "4s", duration: "18s" },
           { w: 150, h: 150, left: "80%", top: "70%", delay: "6s", duration: "35s" },
           { w: 60, h: 60, left: "50%", top: "50%", delay: "8s", duration: "22s" },
-          { w: 100, h: 100, left: "30%", top: "80%", delay: "10s", duration: "28s" }
+          { w: 100, h: 100, left: "30%", top: "80%", delay: "10s", duration: "28s" },
         ].map((bg, index) => (
           <span
             key={index}
@@ -20,7 +20,7 @@ const Hero = () => {
               left: bg.left,
               top: bg.top,
               animationDelay: bg.delay,
-              animationDuration: bg.duration
+              animationDuration: bg.duration,
             }}
           ></span>
         ))}
@@ -60,10 +60,10 @@ const Hero = () => {
           </div>
 
           {/* Right image card */}
-          <div className="md:w-1/2 glass-card p-8 rounded-lg">
+          <div className="w-full md:w-1/2 glass-card p-0 sm:p-8 rounded-lg">
             <div
               style={{
-                backgroundImage: `url('/profile_photo_blue-bg.png')`
+                backgroundImage: `url('/profile_photo_blue-bg.png')`,
               }}
               className="w-full h-[400px] bg-cover bg-center rounded-lg object-top"
             ></div>
