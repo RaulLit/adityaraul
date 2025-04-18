@@ -2,12 +2,8 @@
 
 @layer utilities {
   .text-highlight {
-    color: #64FFDA;
+    color: #64ffda;
   }
-}
-
-.glassmorphism {
-  @apply bg-white/10 backdrop-blur-lg rounded-xl shadow-lg;
 }
 
 .text-primary {
@@ -15,11 +11,13 @@
   color: rgb(10 25 47 / var(--tw-text-opacity, 1));
 }
 
-:where([class^="ri-"])::before { content: "\f3c2"; }
+:where([class^="ri-"])::before {
+  content: "\f3c2";
+}
 body {
-  font-family: 'Inter', sans-serif;
-  background-color: #0A192F;
-  color: #E6F1FF;
+  font-family: "Inter", sans-serif;
+  background-color: #0a192f;
+  color: #e6f1ff;
   scroll-behavior: smooth;
 }
 .glass {
@@ -50,15 +48,17 @@ body {
 }
 .skill-progress {
   height: 100%;
-  background: linear-gradient(90deg, #64FFDA 0%, #57B5E7 50%, #8DD3C7 100%);
+  background: linear-gradient(90deg, #64ffda 0%, #57b5e7 50%, #8dd3c7 100%);
   border-radius: 4px;
 }
-input, textarea {
+input,
+textarea {
   background: rgba(230, 241, 255, 0.05);
-  color: #E6F1FF;
+  color: #e6f1ff;
   outline: none;
 }
-input:focus, textarea:focus {
+input:focus,
+textarea:focus {
   border-color: rgba(230, 241, 255, 0.3);
   box-shadow: 0 0 0 2px rgba(100, 255, 218, 0.2);
 }
@@ -117,10 +117,11 @@ button {
   left: 0;
   width: 0;
   height: 2px;
-  background-color: #64FFDA;
+  background-color: #64ffda;
   transition: width 0.3s ease;
 }
-.nav-link:hover::after, .nav-link.active::after {
+.nav-link:hover::after,
+.nav-link.active::after {
   width: 100%;
 }
 .custom-checkbox {
@@ -135,8 +136,8 @@ button {
   position: relative;
 }
 .custom-checkbox:checked {
-  background: #64FFDA;
-  border-color: #64FFDA;
+  background: #64ffda;
+  border-color: #64ffda;
 }
 .custom-checkbox:checked::before {
   content: "✓";
@@ -144,6 +145,6 @@ button {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: #0A192F;
+  color: #0a192f;
   font-size: 12px;
 }

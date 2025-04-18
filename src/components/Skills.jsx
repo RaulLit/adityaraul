@@ -5,11 +5,11 @@ const skills = [
     category: "Frontend",
     icon: "ri-code-s-slash-line",
     data: [
-      { label: "React", value: 95 },
+      { label: "React", value: 90 },
       { label: "JavaScript", value: 90 },
       { label: "HTML/CSS", value: 95 },
-      { label: "TypeScript", value: 85 },
-      { label: "Angular", value: 80 },
+      { label: "Material UI", value: 90 },
+      { label: "Tailwind", value: 70 },
     ],
   },
   {
@@ -17,10 +17,11 @@ const skills = [
     icon: "ri-server-line",
     data: [
       { label: "Node.js", value: 90 },
-      { label: "Express", value: 85 },
+      { label: "Express", value: 90 },
       { label: "Python", value: 80 },
-      { label: "Django", value: 75 },
-      { label: "GraphQL", value: 80 },
+      { label: "Firebase", value: 90 },
+      { label: "GraphQL", value: 75 },
+      { label: "Flask", value: 65 },
     ],
   },
   {
@@ -28,10 +29,8 @@ const skills = [
     icon: "ri-database-2-line",
     data: [
       { label: "MongoDB", value: 90 },
-      { label: "PostgreSQL", value: 85 },
-      { label: "MySQL", value: 80 },
-      { label: "Redis", value: 75 },
-      { label: "Firebase", value: 85 },
+      { label: "Redis", value: 80 },
+      { label: "Firebase", value: 90 },
     ],
   },
   {
@@ -41,8 +40,9 @@ const skills = [
       { label: "Docker", value: 80 },
       { label: "AWS", value: 75 },
       { label: "Git", value: 95 },
-      { label: "TensorFlow", value: 70 },
-      { label: "CI/CD", value: 85 },
+      { label: "Figma", value: 85 },
+      { label: "Flutter", value: 90 },
+      { label: "Svelte", value: 75 },
     ],
   },
 ];
@@ -70,7 +70,7 @@ const Skills = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {skills.map((section, idx) => (
-            <div className="glass-card p-6 rounded-2xl" key={idx}>
+            <div className="glass-card p-6 rounded-2xl h-fit" key={idx}>
               <div className="w-12 h-12 flex items-center justify-center mb-4 text-[#64FFDA]">
                 <i className={`${section.icon} ri-2x`}></i>
               </div>
