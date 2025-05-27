@@ -1,12 +1,35 @@
-# React + Vite
+## Aditya Raul — Developer Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to the official portfolio of **Aditya Raul**, where I showcase my work in **web development** and **minimalist photography**.
 
-Currently, two official plugins are available:
+------
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### 🚀 Live Site
 
-## Expanding the ESLint configuration
+🌐 [adityaraul.in](https://adityaraul.in)
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+------
+
+### 👨‍💻 About Me
+
+Hi! I'm **Aditya**, a passionate developer and visual creator who enjoys turning ideas into engaging digital experiences. When not building apps, I'm out with my camera capturing life’s moments.
+
+📫 Email: [raul.aditya912@gmail.com](mailto:raul.aditya912@gmail.com)
+🔗 LinkedIn: [linkedin.com/in/adityaraul](https://linkedin.com/in/adityaraul)
+
+------
+
+### 🧪 Setup Instructions
+
+```
+# Clone the repository 
+git clone https://github.com/adityaraul/portfolio.git 
+cd portfolio 
+
+# Install dependencies 
+npm install 
+
+# Start the dev server 
+npm run dev
+```
+> ⚠ Make sure Node.js ≥ 18 is installed.
