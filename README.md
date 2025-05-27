@@ -1,6 +1,6 @@
-## Aditya Raul — Developer Portfolio
+# Aditya Raul — Developer Portfolio
 
-Welcome to the official portfolio of **Aditya Raul**, where I showcase my work in **web development** and **minimalist photography**.
+Welcome to the official portfolio of **Aditya Raul**, where I showcase my work in **Development** and **minimalist photography**. You can find more information in the live website.
 
 ------
 
@@ -15,7 +15,8 @@ Welcome to the official portfolio of **Aditya Raul**, where I showcase my work i
 Hi! I'm **Aditya**, a passionate developer and visual creator who enjoys turning ideas into engaging digital experiences. When not building apps, I'm out with my camera capturing life’s moments.
 
 📫 Email: [raul.aditya912@gmail.com](mailto:raul.aditya912@gmail.com)
-🔗 LinkedIn: [linkedin.com/in/adityaraul](https://linkedin.com/in/adityaraul)
+
+🔗 LinkedIn: [linkedin.com/in/adityakraul](https://linkedin.com/in/adityakraul)
 
 ------
 
