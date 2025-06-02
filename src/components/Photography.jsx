@@ -78,6 +78,7 @@ const Photography = () => {
         <div className="text-center mt-12">
           <a
             href="https://photos.adityaraul.in/"
+            target="_blank"
             className="px-6 py-3 bg-transparent border-2 border-[#64FFDA] text-[#64FFDA] hover:bg-[#64FFDA] hover:bg-opacity-10 rounded-lg whitespace-nowrap"
           >
             View Full Gallery
