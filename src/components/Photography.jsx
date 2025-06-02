@@ -50,8 +50,9 @@ const Photography = () => {
 
         <div className="mb-8">
           <p className="text-lg text-secondary max-w-3xl">
-            Photography is my creative outlet. Through my lens, I capture moments that tell stories and evoke emotions.
-            Here's a collection of my favorite shots from my travels and explorations.
+            Photography is my creative outlet. Through my lens, I capture moments that tell stories
+            and evoke emotions. Here's a collection of my favorite shots from my travels and
+            explorations.
           </p>
         </div>
 
@@ -74,14 +75,14 @@ const Photography = () => {
           ))}
         </div>
 
-        {/* <div className="text-center mt-12">
+        <div className="text-center mt-12">
           <a
-            href="#"
+            href="https://photos.adityaraul.in/"
             className="px-6 py-3 bg-transparent border-2 border-[#64FFDA] text-[#64FFDA] hover:bg-[#64FFDA] hover:bg-opacity-10 rounded-lg whitespace-nowrap"
           >
             View Full Gallery
           </a>
-        </div> */}
+        </div>
       </div>
     </section>
   );
