@@ -2,6 +2,14 @@ import React from "react";
 
 const projects = [
   {
+    title: "Single Sign-On (SSO)",
+    description:
+      "An authentication system connecting multiple apps under my brand LastBenchScholar.",
+    tech: ["Node.js", "MongoDB", "Redis", "Tailwind", "Pug", "Firebase", "Docker"],
+    image: "/projects/sso.png",
+    links: { live: "https://sso.lastbenchscholar.com/" },
+  },
+  {
     title: "Hubbie Chat",
     description:
       "Just another chatting application which has active feature additions from student's feedbacks.",
@@ -20,7 +28,7 @@ const projects = [
   {
     title: "Meteor Strike",
     description:
-      "A comprehensive data visualization platform for business intelligence with real-time monitoring and customizable reports.",
+      "A javascript and Canvas API based simple game demonstrating the power of simple programming.",
     tech: ["HTML", "CSS", "JavaScript", "Canvas API"],
     image: "/projects/meteor_strike.png",
     links: {

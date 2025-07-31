@@ -94,7 +94,7 @@ const Contact = () => {
 
             <div className="flex items-center pt-4">
               <a
-                href="/Resume_13-02-2025.pdf"
+                href="/Aditya_Raul_Resume.pdf"
                 download
                 className="px-6 py-3 bg-[#64FFDA] text-primary hover:bg-opacity-90 rounded-lg whitespace-nowrap flex items-center"
               >
