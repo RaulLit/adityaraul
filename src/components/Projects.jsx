@@ -2,6 +2,14 @@ import React from "react";
 
 const projects = [
   {
+    title: "Arena (Legacy Project)",
+    description:
+      "A platform provide a platform for students to improve their coding skills and participate in various coding contests.",
+    tech: ["Pug", "Bootstrap", "Node.js", "MongoDB", "Redis", "Firebase", "Docker"],
+    image: "/projects/arena.png",
+    links: { live: "https://arena-4700.onrender.com/" },
+  },
+  {
     title: "Single Sign-On (SSO)",
     description:
       "An authentication system connecting multiple apps under my brand LastBenchScholar.",
