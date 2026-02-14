@@ -1,6 +1,18 @@
-import React, { useState } from "react";
+"use client";
 
-const Contact = () => {
+import { useState } from "react";
+import {
+  RiMailLine,
+  RiMapPinLine,
+  RiLinkedinLine,
+  RiDownloadLine,
+  RiGithubFill,
+  RiLinkedinFill,
+  RiInstagramFill,
+  RiTwitterXFill,
+} from "@remixicon/react";
+
+export default function Contact() {
   const [success, setSuccess] = useState(false);
   const [error, setError] = useState(false);
 
@@ -15,27 +27,43 @@ const Contact = () => {
 
   const information = [
     {
-      icon: "ri-mail-line",
+      icon: <RiMailLine size={22} />,
       label: "Email",
       value: "adityaraulco@gmail.com",
     },
     {
-      icon: "ri-map-pin-line",
+      icon: <RiMapPinLine size={22} />,
       label: "Location",
       value: "Navi Mumbai, Maharashtra, India",
     },
     {
-      icon: "ri-linkedin-line",
+      icon: <RiLinkedinLine size={22} />,
       label: "LinkedIn",
       value: "linkedin.com/in/adityaraul",
     },
   ];
 
   const platforms = [
-    { label: "github", href: "https://github.com/RaulLit" },
-    { label: "linkedin", href: "https://www.linkedin.com/in/adityakraul/" },
-    { label: "twitter", href: "https://x.com/adityakraul" },
-    { label: "instagram", href: "https://www.instagram.com/adii.lit/" },
+    {
+      icon: <RiGithubFill size={22} />,
+      label: "github",
+      href: "https://github.com/RaulLit",
+    },
+    {
+      icon: <RiLinkedinFill size={22} />,
+      label: "linkedin",
+      href: "https://www.linkedin.com/in/adityakraul/",
+    },
+    {
+      icon: <RiTwitterXFill size={22} />,
+      label: "twitter",
+      href: "https://x.com/adityakraul",
+    },
+    {
+      icon: <RiInstagramFill size={22} />,
+      label: "instagram",
+      href: "https://www.instagram.com/adii.lit/",
+    },
   ];
 
   const handleSubmit = async (event) => {
@@ -43,7 +71,7 @@ const Contact = () => {
     try {
       const formData = new FormData(event.target);
 
-      formData.append("access_key", "6de2d503-8aca-4004-b9d2-76e1fe5b0652");
+      formData.append("access_key", process.env.NEXT_PUBLIC_WEB3FORM_API_KEY);
 
       const object = Object.fromEntries(formData);
       const json = JSON.stringify(object);
@@ -96,9 +124,9 @@ const Contact = () => {
               <a
                 href="/Aditya_Raul_Resume.pdf"
                 download
-                className="px-6 py-3 bg-[#64FFDA] text-primary hover:bg-opacity-90 rounded-lg whitespace-nowrap flex items-center"
+                className="px-6 py-3 bg-[#64FFDA] text-primary hover:bg-[#64FFDA]/80 rounded-lg whitespace-nowrap flex items-center"
               >
-                <i className="ri-download-line ri-lg mr-2"></i>
+                <RiDownloadLine size={22} className="mr-2" />
                 Download Resume
               </a>
             </div>
@@ -107,7 +135,7 @@ const Contact = () => {
               {information.map((info, idx) => (
                 <div className="flex items-start" key={idx}>
                   <div className="w-10 h-10 flex items-center justify-center mr-4 text-[#64FFDA]">
-                    <i className={`${info.icon} ri-lg`}></i>
+                    {info.icon}
                   </div>
                   <div>
                     <h3 className="text-white font-medium">{info.label}</h3>
@@ -127,7 +155,7 @@ const Contact = () => {
                     target="_blank"
                     className="w-12 h-12 flex items-center justify-center glass-card rounded-full text-[#64FFDA] hover:text-white transition-colors"
                   >
-                    <i className={`ri-${platform.label}-fill ri-lg`}></i>
+                    {platform.icon}
                   </a>
                 ))}
               </div>
@@ -187,7 +215,7 @@ const Contact = () => {
               </div>
               <button
                 type="submit"
-                className="w-full px-6 py-3 bg-[#64FFDA] text-primary hover:bg-opacity-90 rounded-lg whitespace-nowrap cursor-pointer"
+                className="w-full px-6 py-3 bg-[#64FFDA] text-primary hover:bg-[#64FFDA]/80 rounded-lg whitespace-nowrap cursor-pointer"
               >
                 Send Message
               </button>
@@ -211,6 +239,4 @@ const Contact = () => {
       </div>
     </section>
   );
-};
-
-export default Contact;
+}

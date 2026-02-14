@@ -7,8 +7,9 @@ import Contact from "./components/Contact";
 import Skills from "./components/Skills";
 import Footer from "./components/Footer";
 
-const App = () => (
-  <div className="bg-primary text-secondary font-inter">
+export default function Home() {
+  return (
+    <div className="bg-primary text-secondary font-inter">
       <Navbar />
       <Hero />
       <About />
@@ -18,6 +19,5 @@ const App = () => (
       <Contact />
       <Footer />
     </div>
-);
-
-export default App
+  );
+}

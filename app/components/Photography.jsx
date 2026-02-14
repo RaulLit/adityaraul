@@ -1,45 +1,42 @@
-import React from "react";
-
-const photoData = [
-  {
-    src: "/photography/waterfall.jpg",
-    alt: "Mountain landscape",
-  },
-  {
-    src: "/photography/sunset_on_hills.jpeg",
-    alt: "Street photography",
-  },
-  {
-    src: "/photography/monsoon_blue_flower.jpg",
-    alt: "Portrait",
-  },
-  {
-    src: "/photography/window_droplets.jpg",
-    alt: "Ancient ruins",
-  },
-  {
-    src: "/photography/hills_blue_sky.jpeg",
-    alt: "Macro photography",
-  },
-  {
-    src: "/photography/morning_lake_reflection.jpeg",
-    alt: "Beach sunset",
-  },
-  {
-    src: "/photography/leaflet_and_greenary.jpg",
-    alt: "Urban cityscape",
-  },
-  {
-    src: "/photography/purple_sunset.jpg",
-    alt: "Architecture",
-  },
-  {
-    src: "/photography/small_flower_closeup.jpeg",
-    alt: "Wildlife",
-  },
-];
-
-const Photography = () => {
+export default function Photography() {
+  const photoData = [
+    {
+      src: "/photography/waterfall.jpg",
+      alt: "Mountain landscape",
+    },
+    {
+      src: "/photography/sunset_on_hills.jpeg",
+      alt: "Street photography",
+    },
+    {
+      src: "/photography/monsoon_blue_flower.jpg",
+      alt: "Portrait",
+    },
+    {
+      src: "/photography/window_droplets.jpg",
+      alt: "Ancient ruins",
+    },
+    {
+      src: "/photography/hills_blue_sky.jpeg",
+      alt: "Macro photography",
+    },
+    {
+      src: "/photography/morning_lake_reflection.jpeg",
+      alt: "Beach sunset",
+    },
+    {
+      src: "/photography/leaflet_and_greenary.jpg",
+      alt: "Urban cityscape",
+    },
+    {
+      src: "/photography/purple_sunset.jpg",
+      alt: "Architecture",
+    },
+    {
+      src: "/photography/small_flower_closeup.jpeg",
+      alt: "Wildlife",
+    },
+  ];
   return (
     <section id="photography" className="py-20 relative">
       <div className="max-w-7xl mx-auto px-6">
@@ -79,7 +76,7 @@ const Photography = () => {
           <a
             href="https://photos.adityaraul.in/"
             target="_blank"
-            className="px-6 py-3 bg-transparent border-2 border-[#64FFDA] text-[#64FFDA] hover:bg-[#64FFDA] hover:bg-opacity-10 rounded-lg whitespace-nowrap"
+            className="px-6 py-3 bg-transparent border-2 border-[#64FFDA] text-[#64FFDA] hover:bg-[#64FFDA]/10 rounded-lg whitespace-nowrap"
           >
             View Full Gallery
           </a>
@@ -87,6 +84,4 @@ const Photography = () => {
       </div>
     </section>
   );
-};
-
-export default Photography;
+}

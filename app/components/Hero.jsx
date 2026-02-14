@@ -1,6 +1,4 @@
-import React from "react";
-
-const Hero = () => {
+export default function Hero() {
   return (
     <section id="home" className="min-h-screen flex items-center justify-center relative pt-20">
       <div className="animated-bg">
@@ -88,13 +86,13 @@ const Hero = () => {
             <div className="flex space-x-4 pt-4">
               <a
                 href="#projects"
-                className="px-6 py-3 bg-transparent border-2 border-[#64FFDA] text-[#64FFDA] hover:bg-[#64FFDA] hover:bg-opacity-10 rounded-lg whitespace-nowrap"
+                className="px-6 py-3 bg-transparent border-2 border-[#64FFDA] text-[#64FFDA] hover:bg-[#64FFDA]/10 rounded-lg whitespace-nowrap"
               >
                 View My Work
               </a>
               <a
                 href="#contact"
-                className="px-6 py-3 bg-[#64FFDA] text-primary hover:bg-opacity-90 rounded-lg whitespace-nowrap"
+                className="px-6 py-3 bg-[#64FFDA] text-primary hover:bg-[#64FFDA]/80 rounded-lg whitespace-nowrap"
               >
                 Contact Me
               </a>
@@ -114,6 +112,4 @@ const Hero = () => {
       </div>
     </section>
   );
-};
-
-export default Hero;
+}

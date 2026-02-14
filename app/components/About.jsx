@@ -1,6 +1,6 @@
-import React from "react";
+import { RiGraduationCapLine, RiMapPinLine, RiBriefcaseLine, RiTranslate2 } from "@remixicon/react";
 
-const About = () => {
+export default function About() {
   return (
     <section id="about" className="py-20 relative">
       <div className="max-w-7xl mx-auto px-6">
@@ -55,25 +55,25 @@ const About = () => {
               <div className="grid sm:grid-cols-2 gap-4">
                 {[
                   {
-                    icon: "ri-graduation-cap-line",
+                    icon: <RiGraduationCapLine />,
                     text: "B.E in Electronics & Telecommunication",
                   },
                   {
-                    icon: "ri-map-pin-line",
+                    icon: <RiMapPinLine />,
                     text: "Navi Mumbai, Maharashtra, India",
                   },
                   {
-                    icon: "ri-briefcase-line",
+                    icon: <RiBriefcaseLine />,
                     text: "Web & App developer",
                   },
                   {
-                    icon: "ri-translate-2",
+                    icon: <RiTranslate2 />,
                     text: "English, Hindi, Marathi",
                   },
                 ].map((fact, idx) => (
                   <div className="flex items-start" key={idx}>
                     <div className="w-6 h-6 flex items-center justify-center mr-2 text-[#64FFDA]">
-                      <i className={fact.icon}></i>
+                      {fact.icon}
                     </div>
                     <p className="text-secondary">{fact.text}</p>
                   </div>
@@ -85,6 +85,4 @@ const About = () => {
       </div>
     </section>
   );
-};
-
-export default About;
+}

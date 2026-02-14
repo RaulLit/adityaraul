@@ -1,6 +1,9 @@
-import React, { useState, useEffect } from "react";
+"use client";
 
-const Navbar = () => {
+import { useState, useEffect } from "react";
+import { RiMenuLine, RiCloseLine } from "@remixicon/react";
+
+export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
 
@@ -11,10 +14,7 @@ const Navbar = () => {
       sections.forEach((section) => {
         const sectionTop = section.offsetTop - 100;
         const sectionHeight = section.clientHeight;
-        if (
-          window.pageYOffset >= sectionTop &&
-          window.pageYOffset < sectionTop + sectionHeight
-        ) {
+        if (window.pageYOffset >= sectionTop && window.pageYOffset < sectionTop + sectionHeight) {
           current = section.getAttribute("id");
         }
       });
@@ -40,7 +40,9 @@ const Navbar = () => {
     <>
       <nav className="fixed top-0 left-0 w-full z-50 glass py-4 px-6">
         <div className="max-w-7xl mx-auto flex justify-between items-center">
-          <a href="#home" className="text-2xl font-bold text-secondary">Aditya Raul</a>
+          <a href="#home" className="text-2xl font-bold text-secondary">
+            Aditya Raul
+          </a>
           <div className="hidden md:flex space-x-8">
             {links.map((link) => (
               <a
@@ -60,7 +62,7 @@ const Navbar = () => {
             className="md:hidden w-10 h-10 flex items-center justify-center text-secondary"
             onClick={() => setMenuOpen(true)}
           >
-            <i className="ri-menu-line ri-lg"></i>
+            <RiMenuLine size={22} />
           </button>
         </div>
       </nav>
@@ -72,7 +74,7 @@ const Navbar = () => {
             className="absolute top-4 right-6 w-10 h-10 flex items-center justify-center text-secondary"
             onClick={() => setMenuOpen(false)}
           >
-            <i className="ri-close-line ri-lg"></i>
+            <RiCloseLine size={22} />
           </button>
           <div className="flex flex-col space-y-8 text-xl">
             {links.map((link) => (
@@ -93,6 +95,4 @@ const Navbar = () => {
       )}
     </>
   );
-};
-
-export default Navbar;
+}
