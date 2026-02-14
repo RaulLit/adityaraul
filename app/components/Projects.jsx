@@ -3,12 +3,11 @@ import { RiExternalLinkLine, RiGithubLine } from "@remixicon/react";
 export default function Projects() {
   const projects = [
     {
-      title: "Arena (Legacy Project)",
-      description:
-        "A platform provide a platform for students to improve their coding skills and participate in various coding contests.",
-      tech: ["Pug", "Bootstrap", "Node.js", "MongoDB", "Redis", "Firebase", "Docker"],
-      image: "/projects/arena.png",
-      links: { live: "https://arena-4700.onrender.com/" },
+      title: "LastBenchScholar",
+      description: "An ecosystem of web applications that provides various services to students.",
+      tech: ["Next.js", "Tailwind", "Node.js"],
+      image: "/projects/lastbenchscholar.png",
+      links: { live: "https://lastbenchscholar.com/" },
     },
     {
       title: "Single Sign-On (SSO)",
@@ -17,6 +16,14 @@ export default function Projects() {
       tech: ["Node.js", "MongoDB", "Redis", "Tailwind", "Pug", "Firebase", "Docker"],
       image: "/projects/sso.png",
       links: { live: "https://sso.lastbenchscholar.com/" },
+    },
+    {
+      title: "Arena (Legacy Project)",
+      description:
+        "A platform provide a platform for students to improve their coding skills and participate in various coding contests.",
+      tech: ["Pug", "Bootstrap", "Node.js", "MongoDB", "Redis", "Firebase", "Docker"],
+      image: "/projects/arena.png",
+      links: { live: "https://arena-4700.onrender.com/" },
     },
     {
       title: "Hubbie Chat",
