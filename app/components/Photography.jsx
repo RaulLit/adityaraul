@@ -1,40 +1,60 @@
+import Image from "next/image";
+
 export default function Photography() {
   const photoData = [
     {
       src: "/photography/waterfall.jpg",
       alt: "Mountain landscape",
+      width: 1920,
+      height: 2560,
     },
     {
       src: "/photography/sunset_on_hills.jpeg",
       alt: "Street photography",
+      width: 1920,
+      height: 1440,
     },
     {
       src: "/photography/monsoon_blue_flower.jpg",
       alt: "Portrait",
+      width: 1920,
+      height: 1440,
     },
     {
       src: "/photography/window_droplets.jpg",
       alt: "Ancient ruins",
+      width: 1920,
+      height: 1440,
     },
     {
       src: "/photography/hills_blue_sky.jpeg",
       alt: "Macro photography",
+      width: 1920,
+      height: 1440,
     },
     {
       src: "/photography/morning_lake_reflection.jpeg",
       alt: "Beach sunset",
+      width: 1920,
+      height: 1368,
     },
     {
       src: "/photography/leaflet_and_greenary.jpg",
       alt: "Urban cityscape",
+      width: 1920,
+      height: 1440,
     },
     {
       src: "/photography/purple_sunset.jpg",
       alt: "Architecture",
+      width: 1920,
+      height: 1440,
     },
     {
       src: "/photography/small_flower_closeup.jpeg",
       alt: "Wildlife",
+      width: 1920,
+      height: 1440,
     },
   ];
   return (
@@ -67,7 +87,14 @@ export default function Photography() {
         <div className="masonry-grid">
           {photoData.map((photo, idx) => (
             <div key={idx} className="glass-card overflow-hidden rounded-lg">
-              <img src={photo.src} alt={photo.alt} className="w-full rounded-lg object-top m-0" />
+              <Image
+                src={photo.src}
+                alt={photo.alt}
+                width={photo.width}
+                height={photo.height}
+                sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                className="w-full h-auto rounded-lg object-top m-0"
+              />
             </div>
           ))}
         </div>

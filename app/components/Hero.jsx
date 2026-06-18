@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function Hero() {
   return (
     <section id="home" className="min-h-screen flex items-center justify-center relative pt-20">
@@ -101,12 +103,16 @@ export default function Hero() {
 
           {/* Right image card */}
           <div className="w-full md:w-1/2 glass-card p-0 sm:p-8 rounded-lg">
-            <div
-              style={{
-                backgroundImage: `url('/profile_photo_blue-bg.png')`,
-              }}
-              className="w-full h-[400px] bg-cover bg-center rounded-lg object-top"
-            ></div>
+            <div className="relative w-full h-[400px] overflow-hidden rounded-lg">
+              <Image
+                src="/profile_photo_blue-bg.png"
+                alt="Aditya Raul"
+                fill
+                priority
+                sizes="(max-width: 768px) 100vw, 50vw"
+                className="object-cover object-top rounded-lg"
+              />
+            </div>
           </div>
         </div>
       </div>

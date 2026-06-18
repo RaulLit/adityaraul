@@ -1,4 +1,5 @@
 import { RiExternalLinkLine, RiGithubLine } from "@remixicon/react";
+import Image from "next/image";
 
 export default function Projects() {
   const projects = [
@@ -73,12 +74,15 @@ export default function Projects() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, idx) => (
             <div key={idx} className="glass-card rounded-2xl overflow-hidden">
-              <div
-                style={{
-                  backgroundImage: `url('${project.image}')`,
-                }}
-                className="w-full h-48 bg-cover bg-center object-top"
-              ></div>
+              <div className="relative w-full h-48 overflow-hidden">
+                <Image
+                  src={project.image}
+                  alt={project.title}
+                  fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  className="object-cover object-top transition-transform duration-500 hover:scale-105"
+                />
+              </div>
               <div className="p-6 space-y-4">
                 <h3 className="text-xl font-bold text-white">{project.title}</h3>
                 <p className="text-secondary">{project.description}</p>
