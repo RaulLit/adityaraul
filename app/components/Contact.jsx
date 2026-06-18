@@ -10,11 +10,14 @@ import {
   RiLinkedinFill,
   RiInstagramFill,
   RiTwitterXFill,
+  RiHeartLine,
 } from "@remixicon/react";
+import DonateModal from "./DonateModal";
 
 export default function Contact() {
   const [success, setSuccess] = useState(false);
   const [error, setError] = useState(false);
+  const [donateOpen, setDonateOpen] = useState(false);
 
   const showSuccess = () => {
     setSuccess(true);
@@ -120,15 +123,23 @@ export default function Contact() {
               in mind, a question, or just want to say hello, feel free to reach out!
             </p>
 
-            <div className="flex items-center pt-4">
+            <div className="flex items-center flex-wrap gap-4 pt-4">
               <a
                 href="/Aditya_Raul_Resume.pdf"
                 download
-                className="px-6 py-3 bg-[#64FFDA] text-primary hover:bg-[#64FFDA]/80 rounded-lg whitespace-nowrap flex items-center"
+                className="px-6 py-3 bg-[#64FFDA] text-primary hover:bg-[#64FFDA]/80 rounded-lg whitespace-nowrap flex items-center cursor-pointer"
               >
                 <RiDownloadLine size={22} className="mr-2" />
                 Download Resume
               </a>
+              <button
+                type="button"
+                onClick={() => setDonateOpen(true)}
+                className="px-6 py-3 border-2 border-[#64FFDA] text-[#64FFDA] hover:bg-[#64FFDA]/10 rounded-lg whitespace-nowrap flex items-center cursor-pointer"
+              >
+                <RiHeartLine size={22} className="mr-2" />
+                Support Me
+              </button>
             </div>
 
             <div className="space-y-4 pt-4">
@@ -237,6 +248,7 @@ export default function Contact() {
           </div>
         </div>
       </div>
+      <DonateModal isOpen={donateOpen} onClose={() => setDonateOpen(false)} />
     </section>
   );
 }
