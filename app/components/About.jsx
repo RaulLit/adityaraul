@@ -1,4 +1,5 @@
 import { RiGraduationCapLine, RiMapPinLine, RiBriefcaseLine, RiTranslate2 } from "@remixicon/react";
+import Image from "next/image";
 
 export default function About() {
   return (
@@ -13,12 +14,15 @@ export default function About() {
           {/* Image */}
           <div className="w-full md:w-2/5">
             <div className="glass-card p-0 sm:p-4 rounded-lg">
-              <div
-                style={{
-                  backgroundImage: "url('/about_img.jpeg')",
-                }}
-                className="w-full h-[500px] bg-cover bg-center rounded-lg object-top"
-              ></div>
+              <div className="relative w-full h-[500px] overflow-hidden rounded-lg">
+                <Image
+                  src="/about_img.jpeg"
+                  alt="Aditya Raul"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 40vw"
+                  className="object-cover object-top rounded-lg"
+                />
+              </div>
             </div>
           </div>
 
