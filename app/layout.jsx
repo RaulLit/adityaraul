@@ -38,8 +38,12 @@ export default function RootLayout({ children }) {
           `}
         </Script>
 
+        <Script
+          src="https://checkout.razorpay.com/v1/checkout.js"
+          strategy="lazyOnload"
+        />
         <ThemeProvider>{children}</ThemeProvider>
-        <Toaster />
+        <Toaster closeButton duration={10000} />
       </body>
     </html>
   );
