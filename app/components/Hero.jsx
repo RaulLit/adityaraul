@@ -71,12 +71,12 @@ export default function Hero() {
           {/* Left content */}
           <div className="md:w-1/2 space-y-6">
             <div>
-              <h2 className="text-xl text-[#64FFDA]">Hello, my name is</h2>
+              <p className="text-xl text-[#64FFDA]">Hello, my name is</p>
               <h1 className="text-5xl md:text-7xl font-bold mt-2 text-white">Aditya Raul</h1>
               <div className="flex items-center mt-4">
-                <h3 className="text-2xl md:text-3xl text-secondary">Developer</h3>
+                <h2 className="text-2xl md:text-3xl text-secondary">Developer</h2>
                 <span className="mx-3 text-secondary">|</span>
-                <h3 className="text-2xl md:text-3xl text-secondary">Creator</h3>
+                <h2 className="text-2xl md:text-3xl text-secondary">Creator</h2>
               </div>
             </div>
             <p className="text-lg text-secondary max-w-xl">
@@ -100,13 +100,12 @@ export default function Hero() {
           </div>
 
           {/* Right image card */}
-          <div className="w-full md:w-1/2 glass-card p-0 sm:p-8 rounded-lg">
-            <div
-              style={{
-                backgroundImage: `url('/profile_photo_blue-bg.png')`,
-              }}
-              className="w-full h-[400px] bg-cover bg-center rounded-lg object-top"
-            ></div>
+          <div className="w-full md:w-1/2 glass-card p-0 sm:p-8 rounded-lg overflow-hidden">
+            <img
+              src="/profile_photo_blue-bg.png"
+              alt="Aditya Raul - Full Stack Developer and SSO Architect"
+              className="w-full h-[400px] object-cover object-top rounded-lg"
+            />
           </div>
         </div>
       </div>

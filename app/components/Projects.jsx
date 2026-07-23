@@ -72,45 +72,50 @@ export default function Projects() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, idx) => (
-            <div key={idx} className="glass-card rounded-2xl overflow-hidden">
-              <div
-                style={{
-                  backgroundImage: `url('${project.image}')`,
-                }}
-                className="w-full h-48 bg-cover bg-center object-top"
-              ></div>
-              <div className="p-6 space-y-4">
-                <h3 className="text-xl font-bold text-white">{project.title}</h3>
-                <p className="text-secondary">{project.description}</p>
-                <div className="flex flex-wrap gap-2 pt-2">
-                  {project.tech.map((tech, i) => (
-                    <span
-                      key={i}
-                      className="px-3 py-1 text-xs bg-[#112240] text-[#64FFDA] rounded-full"
-                    >
-                      {tech}
-                    </span>
-                  ))}
+            <div key={idx} className="glass-card rounded-2xl overflow-hidden flex flex-col">
+              <img
+                src={project.image}
+                alt={`${project.title} project preview`}
+                className="w-full h-48 object-cover object-top"
+              />
+              <div className="p-6 space-y-4 flex-1 flex flex-col justify-between">
+                <div>
+                  <h3 className="text-xl font-bold text-white">{project.title}</h3>
+                  <p className="text-secondary mt-2">{project.description}</p>
                 </div>
-                <div className="flex space-x-4 pt-2">
-                  <a
-                    href={project.links.live}
-                    className="flex items-center text-[#64FFDA] hover:underline"
-                    target="_blank"
-                  >
-                    <RiExternalLinkLine size={16} className="mr-1" />
-                    Live Demo
-                  </a>
-                  {project.links.code && (
+                <div>
+                  <div className="flex flex-wrap gap-2 pt-2">
+                    {project.tech.map((tech, i) => (
+                      <span
+                        key={i}
+                        className="px-3 py-1 text-xs bg-[#112240] text-[#64FFDA] rounded-full"
+                      >
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                  <div className="flex space-x-4 pt-4">
                     <a
-                      href={project.links.code}
+                      href={project.links.live}
                       className="flex items-center text-[#64FFDA] hover:underline"
                       target="_blank"
+                      rel="noopener noreferrer"
                     >
-                      <RiGithubLine size={16} className="mr-1" />
-                      Code
+                      <RiExternalLinkLine size={16} className="mr-1" />
+                      Live Demo
                     </a>
-                  )}
+                    {project.links.code && (
+                      <a
+                        href={project.links.code}
+                        className="flex items-center text-[#64FFDA] hover:underline"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <RiGithubLine size={16} className="mr-1" />
+                        Code
+                      </a>
+                    )}
+                  </div>
                 </div>
               </div>
             </div>

@@ -12,13 +12,12 @@ export default function About() {
         <div className="flex flex-col md:flex-row gap-12 items-center">
           {/* Image */}
           <div className="w-full md:w-2/5">
-            <div className="glass-card p-0 sm:p-4 rounded-lg">
-              <div
-                style={{
-                  backgroundImage: "url('/about_img.jpeg')",
-                }}
-                className="w-full h-[500px] bg-cover bg-center rounded-lg object-top"
-              ></div>
+            <div className="glass-card p-0 sm:p-4 rounded-lg overflow-hidden">
+              <img
+                src="/about_img.jpeg"
+                alt="Aditya Raul - Full Stack Developer & SSO Architect in Navi Mumbai"
+                className="w-full h-[500px] object-cover object-top rounded-lg"
+              />
             </div>
           </div>
 
@@ -43,7 +42,7 @@ export default function About() {
             </p>
             <p className="text-lg text-secondary">
               Currently, I'm focused on building my own brand{" "}
-              <a className="text-highlight" href="https://lastbenchscholar.com" target="_blank">
+              <a className="text-highlight" href="https://lastbenchscholar.com" target="_blank" rel="noopener noreferrer">
                 LastBenchScholar
               </a>
               , a student centric ecosystem for growth and collaboration.

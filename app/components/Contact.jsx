@@ -65,7 +65,7 @@ export default function Contact() {
     {
       icon: <RiInstagramFill size={22} />,
       label: "instagram",
-      href: "https://www.instagram.com/adii.lit/",
+      href: "https://www.instagram.com/notadityaraul/",
     },
   ];
 
@@ -164,6 +164,8 @@ export default function Contact() {
                     key={platform.label}
                     href={platform.href}
                     target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={`Visit Aditya Raul's ${platform.label} profile`}
                     className="w-12 h-12 flex items-center justify-center glass-card rounded-full text-[#64FFDA] hover:text-white transition-colors"
                   >
                     {platform.icon}

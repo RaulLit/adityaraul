@@ -61,6 +61,7 @@ export default function Navbar() {
           <button
             className="md:hidden w-10 h-10 flex items-center justify-center text-secondary"
             onClick={() => setMenuOpen(true)}
+            aria-label="Open mobile navigation menu"
           >
             <RiMenuLine size={22} />
           </button>
@@ -73,6 +74,7 @@ export default function Navbar() {
           <button
             className="absolute top-4 right-6 w-10 h-10 flex items-center justify-center text-secondary"
             onClick={() => setMenuOpen(false)}
+            aria-label="Close mobile navigation menu"
           >
             <RiCloseLine size={22} />
           </button>

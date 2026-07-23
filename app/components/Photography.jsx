@@ -2,39 +2,39 @@ export default function Photography() {
   const photoData = [
     {
       src: "/photography/waterfall.jpg",
-      alt: "Mountain landscape",
+      alt: "Scenic waterfall flowing down a lush green mountain slope",
     },
     {
       src: "/photography/sunset_on_hills.jpeg",
-      alt: "Street photography",
+      alt: "Golden hour sunset glowing over rolling hills and mist",
     },
     {
       src: "/photography/monsoon_blue_flower.jpg",
-      alt: "Portrait",
+      alt: "Close-up photography of a vibrant blue monsoon flower with raindrops",
     },
     {
       src: "/photography/window_droplets.jpg",
-      alt: "Ancient ruins",
+      alt: "Raindrops glistening on a glass window pane during a monsoon storm",
     },
     {
       src: "/photography/hills_blue_sky.jpeg",
-      alt: "Macro photography",
+      alt: "Panoramic view of green mountain hills under a clear blue sky",
     },
     {
       src: "/photography/morning_lake_reflection.jpeg",
-      alt: "Beach sunset",
+      alt: "Peaceful morning lake reflecting surrounding hills and sky",
     },
     {
       src: "/photography/leaflet_and_greenary.jpg",
-      alt: "Urban cityscape",
+      alt: "Fresh green leaf macro photograph capturing nature detail",
     },
     {
       src: "/photography/purple_sunset.jpg",
-      alt: "Architecture",
+      alt: "Stunning purple and magenta sky during evening sunset",
     },
     {
       src: "/photography/small_flower_closeup.jpeg",
-      alt: "Wildlife",
+      alt: "Detailed macro photograph of a delicate wild blossom",
     },
   ];
   return (
@@ -76,7 +76,8 @@ export default function Photography() {
           <a
             href="https://photos.adityaraul.in/"
             target="_blank"
-            className="px-6 py-3 bg-transparent border-2 border-[#64FFDA] text-[#64FFDA] hover:bg-[#64FFDA]/10 rounded-lg whitespace-nowrap"
+            rel="noopener noreferrer"
+            className="px-6 py-3 bg-transparent border-2 border-[#64FFDA] text-[#64FFDA] hover:bg-[#64FFDA]/10 rounded-lg whitespace-nowrap inline-block"
           >
             View Full Gallery
           </a>

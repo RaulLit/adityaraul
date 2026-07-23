@@ -11,12 +11,14 @@ export default function Home() {
   return (
     <div className="bg-primary text-secondary font-inter">
       <Navbar />
-      <Hero />
-      <About />
-      <Projects />
-      <Skills />
-      <Photography />
-      <Contact />
+      <main>
+        <Hero />
+        <About />
+        <Projects />
+        <Skills />
+        <Photography />
+        <Contact />
+      </main>
       <Footer />
     </div>
   );

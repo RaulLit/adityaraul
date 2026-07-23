@@ -10,6 +10,7 @@ export default function Footer() {
         </p>
         <a
           href="#home"
+          aria-label="Scroll to top"
           className="mt-2 w-10 h-10 flex items-center justify-center glass-card rounded-full text-[#64FFDA] hover:text-white transition-colors"
         >
           <RiArrowUpLine size={22} />
