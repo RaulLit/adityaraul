@@ -17,18 +17,22 @@ export default function About() {
   return (
     <section id="about" className="py-20 relative">
       <div className="max-w-7xl mx-auto px-6">
-        <h2 className="text-3xl font-bold mb-16 relative inline-block">
+        <h2 className="text-2xl sm:text-3xl font-bold mb-12 sm:mb-16 relative inline-block break-words max-w-full">
           {isAnimeMode ? "[ PLAYER STATUS & HUNTER BIO ]" : "About Me"}
-          <span className={`absolute bottom-0 left-0 w-1/2 h-1 ${isAnimeMode ? "bg-[#00F0FF] shadow-[0_0_10px_#00F0FF]" : "bg-[#64FFDA]"}`}></span>
+          <span
+            className={`absolute bottom-0 left-0 w-1/2 h-1 ${isAnimeMode ? "bg-[#00F0FF] shadow-[0_0_10px_#00F0FF]" : "bg-[#64FFDA]"}`}
+          ></span>
         </h2>
 
         <div className="flex flex-col md:flex-row gap-12 items-center">
           {/* Image / Hunter Card */}
           <div className="w-full md:w-2/5">
-            <div className={`glass-card p-0 sm:p-4 rounded-lg ${isAnimeMode ? "border-[#00F0FF]/60 shadow-[0_0_20px_rgba(0,240,255,0.25)]" : ""}`}>
+            <div
+              className={`glass-card p-0 sm:p-4 rounded-lg ${isAnimeMode ? "border-[#00F0FF]/60 shadow-[0_0_20px_rgba(0,240,255,0.25)]" : ""}`}
+            >
               <div className="relative w-full h-[500px] overflow-hidden rounded-lg">
                 <Image
-                  src={isAnimeMode ? "/anime/solo_leveling_avatar.jpg" : "/about_img.jpeg"}
+                  src={isAnimeMode ? "/anime/solo_leveling_banner.jpg" : "/about_img.jpeg"}
                   alt="Aditya Raul"
                   fill
                   sizes="(max-width: 768px) 100vw, 40vw"
@@ -41,9 +45,14 @@ export default function About() {
           {/* Text content / Hunter Window */}
           <div className="md:w-3/5 space-y-6">
             <p className="text-lg text-secondary">
-              Hello! <span className={isAnimeMode ? "text-[#00F0FF] font-bold font-mono" : "text-highlight"}>I'm Aditya</span>, a passionate developer
-              based in Navi Mumbai, India with experience in building mobile applications, websites
-              and other digital products.
+              Hello!{" "}
+              <span
+                className={isAnimeMode ? "text-[#00F0FF] font-bold font-mono" : "text-highlight"}
+              >
+                I'm Aditya
+              </span>
+              , a passionate developer based in Navi Mumbai, India with experience in building
+              mobile applications, websites and other digital products.
             </p>
             <p className="text-lg text-secondary">
               My journey in tech began after 12th boards during Covid-19 pandemic, I started with
@@ -55,18 +64,27 @@ export default function About() {
 
             {isAnimeMode ? (
               /* Solo Leveling Hunter Status Window */
-              <div className="p-6 rounded-xl border border-[#00F0FF]/60 bg-[#050B14]/80 backdrop-blur-md shadow-[0_0_25px_rgba(0,240,255,0.2)] font-mono space-y-4">
+              <div className="p-4 sm:p-6 rounded-xl border border-[#00F0FF]/60 bg-[#050B14]/80 backdrop-blur-md shadow-[0_0_25px_rgba(0,240,255,0.2)] font-mono space-y-4">
                 <div className="flex items-center justify-between border-b border-[#00F0FF]/30 pb-3">
-                  <span className="text-[#00F0FF] font-bold text-sm tracking-widest">[ SYSTEM STATUS WINDOW ]</span>
-                  <span className="text-[#FCD34D] text-xs font-bold">[ CLASS: SHADOW MONARCH ]</span>
+                  <span className="text-[#00F0FF] font-bold text-xs sm:text-sm tracking-widest">
+                    [ SYSTEM STATUS WINDOW ]
+                  </span>
+                  <span className="text-[#FCD34D] text-xs font-bold">
+                    [ CLASS: SHADOW MONARCH ]
+                  </span>
                 </div>
 
                 <div className="grid sm:grid-cols-2 gap-4 pt-2">
                   {hunterStats.map((stat, idx) => (
-                    <div key={idx} className="bg-[#0B132B]/80 p-3 rounded-lg border border-[#00F0FF]/20">
+                    <div
+                      key={idx}
+                      className="bg-[#0B132B]/80 p-3 rounded-lg border border-[#00F0FF]/20"
+                    >
                       <div className="flex justify-between items-center text-xs mb-1">
                         <span className="text-[#00F0FF] font-bold">{stat.label}</span>
-                        <span className="text-white bg-[#00F0FF]/20 px-2 py-0.5 rounded border border-[#00F0FF]/40">{stat.val}</span>
+                        <span className="text-white bg-[#00F0FF]/20 px-2 py-0.5 rounded border border-[#00F0FF]/40">
+                          {stat.val}
+                        </span>
                       </div>
                       <p className="text-[11px] text-secondary font-sans">{stat.desc}</p>
                     </div>
@@ -76,9 +94,10 @@ export default function About() {
             ) : (
               <>
                 <p className="text-lg text-secondary">
-                  When I'm not coding, you'll find me exploring the world through my camera lens, hiking
-                  in nature, playing basketball or playing guitar & trying to sing. I believe that
-                  learning diverse skills in tech & non-tech keeps fueling the excitement in me.
+                  When I'm not coding, you'll find me exploring the world through my camera lens,
+                  hiking in nature, playing basketball or playing guitar & trying to sing. I believe
+                  that learning diverse skills in tech & non-tech keeps fueling the excitement in
+                  me.
                 </p>
                 <p className="text-lg text-secondary">
                   Currently, I'm focused on building my own brand{" "}
@@ -97,7 +116,9 @@ export default function About() {
 
             {/* Quick Facts */}
             <div className="pt-4">
-              <h3 className="text-xl font-semibold mb-4">{isAnimeMode ? "[ GUILD DATA & QUICK FACTS ]" : "Quick Facts"}</h3>
+              <h3 className="text-xl font-semibold mb-4">
+                {isAnimeMode ? "[ GUILD DATA & QUICK FACTS ]" : "Quick Facts"}
+              </h3>
               <div className="grid sm:grid-cols-2 gap-4">
                 {[
                   {
@@ -118,7 +139,9 @@ export default function About() {
                   },
                 ].map((fact, idx) => (
                   <div className="flex items-start" key={idx}>
-                    <div className={`w-6 h-6 flex items-center justify-center mr-2 ${isAnimeMode ? "text-[#00F0FF]" : "text-[#64FFDA]"}`}>
+                    <div
+                      className={`w-6 h-6 flex items-center justify-center mr-2 ${isAnimeMode ? "text-[#00F0FF]" : "text-[#64FFDA]"}`}
+                    >
                       {fact.icon}
                     </div>
                     <p className="text-secondary">{fact.text}</p>

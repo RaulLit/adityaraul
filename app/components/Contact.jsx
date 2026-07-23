@@ -113,25 +113,25 @@ export default function Contact() {
   return (
     <section id="contact" className="py-20 relative">
       <div className="max-w-7xl mx-auto px-6">
-        <h2 className="text-3xl font-bold mb-16 relative inline-block">
-          {isAnimeMode ? "[ TRANSMIT SYSTEM QUEST / CONTACT MONARCH ]" : "Get In Touch"}
+        <h2 className="text-2xl sm:text-3xl font-bold mb-12 sm:mb-16 relative inline-block break-words max-w-full">
+          {isAnimeMode ? "[ TRANSMIT SYSTEM QUEST ]" : "Get In Touch"}
           <span className={`absolute bottom-0 left-0 w-1/2 h-1 ${isAnimeMode ? "bg-[#00F0FF] shadow-[0_0_10px_#00F0FF]" : "bg-[#64FFDA]"}`}></span>
         </h2>
 
         <div className="flex flex-col md:flex-row gap-12">
           {/* Left contact info */}
           <div className="md:w-1/2 space-y-6">
-            <p className="text-lg text-secondary">
+            <p className="text-base sm:text-lg text-secondary">
               {isAnimeMode
                 ? "I am available for high-tier party raids, enterprise SSO architecture, and full-stack project summons. Transmit your quest message below!"
                 : "I'm currently open to new opportunities and collaborations. Whether you have a project in mind, a question, or just want to say hello, feel free to reach out!"}
             </p>
 
-            <div className="flex items-center flex-wrap gap-4 pt-4">
+            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 pt-4">
               <a
                 href="/Aditya_Raul_Resume.pdf"
                 download
-                className={`px-6 py-3 ${
+                className={`px-6 py-3 justify-center ${
                   isAnimeMode
                     ? "bg-[#00F0FF] text-[#050B14] font-bold font-mono hover:bg-[#00F0FF]/80 shadow-[0_0_15px_rgba(0,240,255,0.5)]"
                     : "bg-[#64FFDA] text-primary hover:bg-[#64FFDA]/80"
@@ -143,7 +143,7 @@ export default function Contact() {
               <button
                 type="button"
                 onClick={() => setDonateOpen(true)}
-                className={`px-6 py-3 border-2 ${
+                className={`px-6 py-3 border-2 justify-center ${
                   isAnimeMode
                     ? "border-[#00F0FF] text-[#00F0FF] hover:bg-[#00F0FF]/20 font-mono shadow-[0_0_15px_rgba(0,240,255,0.3)]"
                     : "border-[#64FFDA] text-[#64FFDA] hover:bg-[#64FFDA]/10"

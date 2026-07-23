@@ -70,7 +70,7 @@ export default function Skills() {
   return (
     <section id="skills" className="py-20 relative">
       <div className="max-w-7xl mx-auto px-6">
-        <h2 className="text-3xl font-bold mb-16 relative inline-block">
+        <h2 className="text-2xl sm:text-3xl font-bold mb-12 sm:mb-16 relative inline-block break-words max-w-full">
           {isAnimeMode ? "[ PLAYER ACTIVE & PASSIVE SKILLS ]" : "Skills & Expertise"}
           <span className={`absolute bottom-0 left-0 w-1/2 h-1 ${isAnimeMode ? "bg-[#00F0FF] shadow-[0_0_10px_#00F0FF]" : "bg-[#64FFDA]"}`}></span>
         </h2>

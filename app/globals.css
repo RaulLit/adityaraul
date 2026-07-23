@@ -100,8 +100,18 @@ button {
   }
 }
 .masonry-grid {
-  column-count: 3;
+  column-count: 1;
   column-gap: 20px;
+}
+@media (min-width: 640px) {
+  .masonry-grid {
+    column-count: 2;
+  }
+}
+@media (min-width: 1024px) {
+  .masonry-grid {
+    column-count: 3;
+  }
 }
 .masonry-grid div {
   margin-bottom: 20px;

@@ -72,15 +72,15 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       {menuOpen && (
-        <div className="fixed inset-0 z-50 glass flex-col justify-center items-center flex">
+        <div className={`fixed inset-0 z-50 flex-col justify-center items-center flex ${isAnimeMode ? "bg-[#050B14]/95 backdrop-blur-xl border border-[#00F0FF]/50" : "glass"}`}>
           <button
-            className="absolute top-4 right-6 w-10 h-10 flex items-center justify-center text-secondary"
+            className={`absolute top-4 right-6 w-10 h-10 flex items-center justify-center ${isAnimeMode ? "text-[#00F0FF]" : "text-secondary"}`}
             onClick={() => setMenuOpen(false)}
             aria-label="Close mobile navigation menu"
           >
             <RiCloseLine size={22} />
           </button>
-          <div className="flex flex-col space-y-8 text-xl">
+          <div className="flex flex-col space-y-8 text-xl text-center">
             {links.map((link) => (
               <a
                 key={link}
@@ -89,9 +89,9 @@ export default function Navbar() {
                   e.preventDefault();
                   scrollToSection(`#${link}`);
                 }}
-                className="text-secondary hover:text-white"
+                className={`${isAnimeMode ? "font-mono text-[#00F0FF] text-lg uppercase tracking-wider" : "text-secondary hover:text-white"}`}
               >
-                {link.charAt(0).toUpperCase() + link.slice(1)}
+                {isAnimeMode ? `[ ${link} ]` : link.charAt(0).toUpperCase() + link.slice(1)}
               </a>
             ))}
           </div>
