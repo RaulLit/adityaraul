@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function Photography() {
   const photoData = [
     {
@@ -67,7 +69,14 @@ export default function Photography() {
         <div className="masonry-grid">
           {photoData.map((photo, idx) => (
             <div key={idx} className="glass-card overflow-hidden rounded-lg">
-              <img src={photo.src} alt={photo.alt} className="w-full rounded-lg object-top m-0" />
+              <Image
+                src={photo.src}
+                alt={photo.alt}
+                width={photo.width}
+                height={photo.height}
+                sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                className="w-full h-auto rounded-lg object-top m-0"
+              />
             </div>
           ))}
         </div>
