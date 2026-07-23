@@ -96,18 +96,7 @@ export default function Projects() {
                     </span>
                   ))}
                 </div>
-                <div>
-                  <div className="flex flex-wrap gap-2 pt-2">
-                    {project.tech.map((tech, i) => (
-                      <span
-                        key={i}
-                        className="px-3 py-1 text-xs bg-[#112240] text-[#64FFDA] rounded-full"
-                      >
-                        {tech}
-                      </span>
-                    ))}
-                  </div>
-                  <div className="flex space-x-4 pt-4">
+                <div className="flex space-x-4 pt-4">
                     <a
                       href={project.links.live}
                       className="flex items-center text-[#64FFDA] hover:underline"
@@ -129,7 +118,6 @@ export default function Projects() {
                       </a>
                     )}
                   </div>
-                </div>
               </div>
             </div>
           ))}
