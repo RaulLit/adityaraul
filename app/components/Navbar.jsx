@@ -2,8 +2,10 @@
 
 import { useState, useEffect } from "react";
 import { RiMenuLine, RiCloseLine } from "@remixicon/react";
+import { useAnimeTheme } from "../providers/AnimeThemeProvider";
 
 export default function Navbar() {
+  const { isAnimeMode } = useAnimeTheme();
   const [menuOpen, setMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
 
@@ -38,10 +40,10 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className="fixed top-0 left-0 w-full z-50 glass py-4 px-6">
+      <nav className={`fixed top-0 left-0 w-full z-50 py-4 px-6 transition-all duration-300 ${isAnimeMode ? "bg-[#050B14]/80 border-b border-[#00F0FF]/40 backdrop-blur-md shadow-[0_4px_20px_rgba(0,240,255,0.15)]" : "glass"}`}>
         <div className="max-w-7xl mx-auto flex justify-between items-center">
-          <a href="#home" className="text-2xl font-bold text-secondary">
-            Aditya Raul
+          <a href="#home" className={`text-2xl font-bold ${isAnimeMode ? "font-mono text-[#00F0FF] tracking-wider text-shadow-[0_0_10px_#00F0FF]" : "text-secondary"}`}>
+            {isAnimeMode ? "[ ADITYA.RAUL ]" : "Aditya Raul"}
           </a>
           <div className="hidden md:flex space-x-8">
             {links.map((link) => (
@@ -52,14 +54,14 @@ export default function Navbar() {
                   e.preventDefault();
                   scrollToSection(`#${link}`);
                 }}
-                className={`nav-link text-secondary hover:text-white ${activeSection === link ? "active" : ""}`}
+                className={`nav-link text-secondary hover:text-white ${isAnimeMode ? "font-mono text-xs uppercase" : ""} ${activeSection === link ? "active text-[#00F0FF]" : ""}`}
               >
-                {link.charAt(0).toUpperCase() + link.slice(1)}
+                {isAnimeMode ? `[ ${link} ]` : link.charAt(0).toUpperCase() + link.slice(1)}
               </a>
             ))}
           </div>
           <button
-            className="md:hidden w-10 h-10 flex items-center justify-center text-secondary"
+            className={`md:hidden w-10 h-10 flex items-center justify-center ${isAnimeMode ? "text-[#00F0FF]" : "text-secondary"}`}
             onClick={() => setMenuOpen(true)}
             aria-label="Open mobile navigation menu"
           >

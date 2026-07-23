@@ -86,6 +86,8 @@ export const viewport = {
   initialScale: 1,
 };
 
+import { AnimeThemeProvider } from "./providers/AnimeThemeProvider";
+
 export default function RootLayout({ children }) {
   const jsonLd = {
     "@context": "https://schema.org",
@@ -152,7 +154,9 @@ export default function RootLayout({ children }) {
         </Script>
 
         <Script src="https://checkout.razorpay.com/v1/checkout.js" strategy="lazyOnload" />
-        <ThemeProvider>{children}</ThemeProvider>
+        <AnimeThemeProvider>
+          <ThemeProvider>{children}</ThemeProvider>
+        </AnimeThemeProvider>
         <Toaster closeButton duration={10000} />
       </body>
     </html>

@@ -1,6 +1,11 @@
+"use client";
+
 import Image from "next/image";
+import { useAnimeTheme } from "../providers/AnimeThemeProvider";
 
 export default function Photography() {
+  const { isAnimeMode } = useAnimeTheme();
+
   const photoData = [
     {
       src: "/photography/waterfall.jpg",
@@ -43,37 +48,26 @@ export default function Photography() {
     <section id="photography" className="py-20 relative">
       <div className="max-w-7xl mx-auto px-6">
         <h2 className="text-3xl font-bold mb-16 relative inline-block">
-          Photography
-          <span className="absolute bottom-0 left-0 w-1/2 h-1 bg-[#64FFDA]"></span>
+          {isAnimeMode ? "[ MONARCH'S DOMAIN & SHADOW RECORDS ]" : "Photography"}
+          <span className={`absolute bottom-0 left-0 w-1/2 h-1 ${isAnimeMode ? "bg-[#00F0FF] shadow-[0_0_10px_#00F0FF]" : "bg-[#64FFDA]"}`}></span>
         </h2>
 
         <div className="mb-8">
           <p className="text-lg text-secondary max-w-3xl">
-            Photography is my creative outlet. Through my lens, I capture moments that tell stories
-            and evoke emotions. Here's a collection of my favorite shots from my travels and
-            explorations.
+            {isAnimeMode
+              ? "Photography is my creative perception. Through the lens of the Shadow Monarch, I freeze extraordinary moments across nature and human realms."
+              : "Photography is my creative outlet. Through my lens, I capture moments that tell stories and evoke emotions. Here's a collection of my favorite shots from my travels and explorations."}
           </p>
         </div>
 
-        {/* <div className="flex space-x-4 mb-8 flex-wrap">
-          {["All", "Nature", "Urban", "Portrait", "Travel"].map((filter, idx) => (
-            <button
-              key={idx}
-              className={`px-4 py-2 ${idx === 0 ? "bg-[#64FFDA] text-primary" : "bg-transparent border border-[#64FFDA] text-[#64FFDA]"} hover:bg-[#64FFDA] hover:bg-opacity-10 rounded-lg whitespace-nowrap`}
-            >
-              {filter}
-            </button>
-          ))}
-        </div> */}
-
         <div className="masonry-grid">
           {photoData.map((photo, idx) => (
-            <div key={idx} className="glass-card overflow-hidden rounded-lg">
+            <div key={idx} className={`glass-card overflow-hidden rounded-lg ${isAnimeMode ? "border-[#00F0FF]/40 hover:border-[#00F0FF]" : ""}`}>
               <Image
                 src={photo.src}
                 alt={photo.alt}
-                width={photo.width}
-                height={photo.height}
+                width={600}
+                height={400}
                 sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                 className="w-full h-auto rounded-lg object-top m-0"
               />
@@ -86,9 +80,13 @@ export default function Photography() {
             href="https://photos.adityaraul.in/"
             target="_blank"
             rel="noopener noreferrer"
-            className="px-6 py-3 bg-transparent border-2 border-[#64FFDA] text-[#64FFDA] hover:bg-[#64FFDA]/10 rounded-lg whitespace-nowrap inline-block"
+            className={`px-6 py-3 bg-transparent border-2 ${
+              isAnimeMode
+                ? "border-[#00F0FF] text-[#00F0FF] hover:bg-[#00F0FF]/20 font-mono shadow-[0_0_15px_rgba(0,240,255,0.3)]"
+                : "border-[#64FFDA] text-[#64FFDA] hover:bg-[#64FFDA]/10"
+            } rounded-lg whitespace-nowrap inline-block`}
           >
-            View Full Gallery
+            {isAnimeMode ? "[ EXPAND FULL DOMAIN GALLERY ]" : "View Full Gallery"}
           </a>
         </div>
       </div>

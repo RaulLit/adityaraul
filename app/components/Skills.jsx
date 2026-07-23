@@ -1,9 +1,14 @@
+"use client";
+
 import { RiCodeSSlashLine, RiServerLine, RiDatabase2Line, RiToolsLine } from "@remixicon/react";
+import { useAnimeTheme } from "../providers/AnimeThemeProvider";
 
 export default function Skills() {
+  const { isAnimeMode } = useAnimeTheme();
+
   const skills = [
     {
-      category: "Frontend",
+      category: isAnimeMode ? "[ FRONTEND SPELLS ]" : "Frontend",
       icon: <RiCodeSSlashLine size={32} />,
       data: [
         { label: "React", value: 90 },
@@ -14,7 +19,7 @@ export default function Skills() {
       ],
     },
     {
-      category: "Backend",
+      category: isAnimeMode ? "[ BACKEND SHADOWS ]" : "Backend",
       icon: <RiServerLine size={32} />,
       data: [
         { label: "Node.js", value: 90 },
@@ -26,7 +31,7 @@ export default function Skills() {
       ],
     },
     {
-      category: "Database",
+      category: isAnimeMode ? "[ STORAGE VAULTS ]" : "Database",
       icon: <RiDatabase2Line size={32} />,
       data: [
         { label: "MongoDB", value: 90 },
@@ -35,7 +40,7 @@ export default function Skills() {
       ],
     },
     {
-      category: "Other Skills",
+      category: isAnimeMode ? "[ SYSTEM ARTIFACTS ]" : "Other Skills",
       icon: <RiToolsLine size={32} />,
       data: [
         { label: "Docker", value: 80 },
@@ -50,9 +55,11 @@ export default function Skills() {
 
   const SkillBar = ({ label, value }) => (
     <div>
-      <div className="flex justify-between mb-1">
+      <div className="flex justify-between mb-1 font-mono text-xs">
         <span className="text-secondary">{label}</span>
-        <span className="text-[#64FFDA]">{value}%</span>
+        <span className={isAnimeMode ? "text-[#00F0FF] font-bold" : "text-[#64FFDA]"}>
+          {isAnimeMode ? `LVL ${value}` : `${value}%`}
+        </span>
       </div>
       <div className="skill-bar">
         <div className="skill-progress" style={{ width: `${value}%` }}></div>
@@ -64,17 +71,17 @@ export default function Skills() {
     <section id="skills" className="py-20 relative">
       <div className="max-w-7xl mx-auto px-6">
         <h2 className="text-3xl font-bold mb-16 relative inline-block">
-          Skills & Expertise
-          <span className="absolute bottom-0 left-0 w-1/2 h-1 bg-[#64FFDA]"></span>
+          {isAnimeMode ? "[ PLAYER ACTIVE & PASSIVE SKILLS ]" : "Skills & Expertise"}
+          <span className={`absolute bottom-0 left-0 w-1/2 h-1 ${isAnimeMode ? "bg-[#00F0FF] shadow-[0_0_10px_#00F0FF]" : "bg-[#64FFDA]"}`}></span>
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {skills.map((section, idx) => (
-            <div className="glass-card p-6 rounded-2xl h-fit" key={idx}>
-              <div className="w-12 h-12 flex items-center justify-center mb-4 text-[#64FFDA]">
+            <div className={`glass-card p-6 rounded-2xl h-fit ${isAnimeMode ? "border-[#00F0FF]/40" : ""}`} key={idx}>
+              <div className={`w-12 h-12 flex items-center justify-center mb-4 ${isAnimeMode ? "text-[#00F0FF]" : "text-[#64FFDA]"}`}>
                 {section.icon}
               </div>
-              <h3 className="text-xl font-bold mb-4">{section.category}</h3>
+              <h3 className={`text-xl font-bold mb-4 ${isAnimeMode ? "font-mono text-[#00F0FF]" : ""}`}>{section.category}</h3>
               <div className="space-y-4">
                 {section.data.map((skill, i) => (
                   <SkillBar key={i} {...skill} />

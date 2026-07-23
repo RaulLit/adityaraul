@@ -14,7 +14,10 @@ import {
 } from "@remixicon/react";
 import DonateModal from "./DonateModal";
 
+import { useAnimeTheme } from "../providers/AnimeThemeProvider";
+
 export default function Contact() {
+  const { isAnimeMode } = useAnimeTheme();
   const [success, setSuccess] = useState(false);
   const [error, setError] = useState(false);
   const [donateOpen, setDonateOpen] = useState(false);
@@ -111,34 +114,43 @@ export default function Contact() {
     <section id="contact" className="py-20 relative">
       <div className="max-w-7xl mx-auto px-6">
         <h2 className="text-3xl font-bold mb-16 relative inline-block">
-          Get In Touch
-          <span className="absolute bottom-0 left-0 w-1/2 h-1 bg-[#64FFDA]"></span>
+          {isAnimeMode ? "[ TRANSMIT SYSTEM QUEST / CONTACT MONARCH ]" : "Get In Touch"}
+          <span className={`absolute bottom-0 left-0 w-1/2 h-1 ${isAnimeMode ? "bg-[#00F0FF] shadow-[0_0_10px_#00F0FF]" : "bg-[#64FFDA]"}`}></span>
         </h2>
 
         <div className="flex flex-col md:flex-row gap-12">
           {/* Left contact info */}
           <div className="md:w-1/2 space-y-6">
             <p className="text-lg text-secondary">
-              I'm currently open to new opportunities and collaborations. Whether you have a project
-              in mind, a question, or just want to say hello, feel free to reach out!
+              {isAnimeMode
+                ? "I am available for high-tier party raids, enterprise SSO architecture, and full-stack project summons. Transmit your quest message below!"
+                : "I'm currently open to new opportunities and collaborations. Whether you have a project in mind, a question, or just want to say hello, feel free to reach out!"}
             </p>
 
             <div className="flex items-center flex-wrap gap-4 pt-4">
               <a
                 href="/Aditya_Raul_Resume.pdf"
                 download
-                className="px-6 py-3 bg-[#64FFDA] text-primary hover:bg-[#64FFDA]/80 rounded-lg whitespace-nowrap flex items-center cursor-pointer"
+                className={`px-6 py-3 ${
+                  isAnimeMode
+                    ? "bg-[#00F0FF] text-[#050B14] font-bold font-mono hover:bg-[#00F0FF]/80 shadow-[0_0_15px_rgba(0,240,255,0.5)]"
+                    : "bg-[#64FFDA] text-primary hover:bg-[#64FFDA]/80"
+                } rounded-lg whitespace-nowrap flex items-center cursor-pointer`}
               >
                 <RiDownloadLine size={22} className="mr-2" />
-                Download Resume
+                {isAnimeMode ? "[ HUNTER RESUME ]" : "Download Resume"}
               </a>
               <button
                 type="button"
                 onClick={() => setDonateOpen(true)}
-                className="px-6 py-3 border-2 border-[#64FFDA] text-[#64FFDA] hover:bg-[#64FFDA]/10 rounded-lg whitespace-nowrap flex items-center cursor-pointer"
+                className={`px-6 py-3 border-2 ${
+                  isAnimeMode
+                    ? "border-[#00F0FF] text-[#00F0FF] hover:bg-[#00F0FF]/20 font-mono shadow-[0_0_15px_rgba(0,240,255,0.3)]"
+                    : "border-[#64FFDA] text-[#64FFDA] hover:bg-[#64FFDA]/10"
+                } rounded-lg whitespace-nowrap flex items-center cursor-pointer`}
               >
                 <RiHeartLine size={22} className="mr-2" />
-                Support Me
+                {isAnimeMode ? "[ SUPPORT GUILD ]" : "Support Me"}
               </button>
             </div>
 
@@ -228,9 +240,13 @@ export default function Contact() {
               </div>
               <button
                 type="submit"
-                className="w-full px-6 py-3 bg-[#64FFDA] text-primary hover:bg-[#64FFDA]/80 rounded-lg whitespace-nowrap cursor-pointer"
+                className={`w-full px-6 py-3 ${
+                  isAnimeMode
+                    ? "bg-[#00F0FF] text-[#050B14] font-bold font-mono hover:bg-[#00F0FF]/80 shadow-[0_0_20px_rgba(0,240,255,0.6)]"
+                    : "bg-[#64FFDA] text-primary hover:bg-[#64FFDA]/80"
+                } rounded-lg whitespace-nowrap cursor-pointer`}
               >
-                Send Message
+                {isAnimeMode ? "[ TRANSMIT QUEST MESSAGE ]" : "Send Message"}
               </button>
             </form>
             <div

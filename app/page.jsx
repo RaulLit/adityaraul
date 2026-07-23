@@ -6,11 +6,13 @@ import Photography from "./components/Photography";
 import Contact from "./components/Contact";
 import Skills from "./components/Skills";
 import Footer from "./components/Footer";
+import SystemHUD from "./components/SystemHUD";
 
 export default function Home() {
   return (
     <div className="bg-primary text-secondary font-inter">
       <Navbar />
+      <SystemHUD />
       <main>
         <Hero />
         <About />
